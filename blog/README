@@ -1,0 +1,24 @@
+J'ai fait ce fichier pour qu'on ne galère pas à chercher les commandes à chaque fois
+
+Pour lancer le serveur :
+    python manage.py runserver
+
+Adresse des pages : 
+    Page d'accueuil : http://127.0.0.1:8000
+    
+    Page d'admin : http://127.0.0.1:8000/admin/
+    
+    Pythonanywhere (attention n'est pas toujours actualisé avec git) : http://aaridouane.pythonanywhere.com/
+
+Créer les tables (faire la migration) : 
+    python manage.py makemigrations blog
+
+    Appliquer ces migrations avec : python manage.py migrate blog
+
+
+Liens utiles pour les sites : 
+    Djangogirls : https://tutorial.djangogirls.org/fr/
+
+    Openclassroom : https://openclassrooms.com/fr/courses/4425076-decouvrez-le-framework-django/4631346-ajoutez-des-relations-entre-les-modeles
+
+    
