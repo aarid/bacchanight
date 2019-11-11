@@ -1,5 +1,7 @@
 J'ai fait ce fichier pour qu'on ne galère pas à chercher les commandes à chaque fois
 
+Mot de passe page admin : azerty1234
+
 Pour lancer le serveur :
     python manage.py runserver
 
