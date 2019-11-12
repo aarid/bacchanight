@@ -1,5 +1,8 @@
 J'ai fait ce fichier pour qu'on ne galère pas à chercher les commandes à chaque fois
 
+Pour se mettre sur l'environnement virtuel :
+    source myvenv/bin/activate
+
 Mot de passe page admin : azerty1234
 
 Pour lancer le serveur :
