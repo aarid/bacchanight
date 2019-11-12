@@ -1,6 +1,9 @@
 J'ai fait ce fichier pour qu'on ne galère pas à chercher les commandes à chaque fois
 
-Pour se mettre sur l'environnement virtuel :
+Il faut tout d'abord créer son propre environnement virtuel (qui doit écraser myvenv):
+    python3 -m venv myvenv
+
+Et se mettre sur l'environnement virtuel :
     source myvenv/bin/activate
 
 Mot de passe page admin : azerty1234
