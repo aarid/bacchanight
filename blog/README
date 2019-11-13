@@ -6,6 +6,9 @@ Il faut tout d'abord créer son propre environnement virtuel (qui doit écraser 
 Et se mettre sur l'environnement virtuel :
     source myvenv/bin/activate
 
+Il faut aussi installer la bibliothèque Pillow avec :
+    sudo pip install Pillow
+
 Mot de passe page admin : azerty1234
 
 Pour lancer le serveur :
