@@ -10,6 +10,7 @@ Il faut aussi installer la bibliothèque Pillow avec :
     sudo pip install Pillow
 
 Mot de passe page admin : azerty1234
+Mot de passe passe admin : azerty1234
 
 Pour lancer le serveur :
     python manage.py runserver
