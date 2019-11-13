@@ -22,8 +22,20 @@ class Joueur(models.Model):
     a = 0
 
 #Aguibou
+class Reponse(models.Model):
+    cleReponse = models.IntegerField(primary_key=True)
+    description = models.CharField(max_length= 200, null=True)
+
+    def __str__(self):
+        return self.description
+
 class Question(models.Model):
-    b = 1
+    description = models.CharField(max_length=200, null=True)
+    
+    reponses = models.ManyToManyField(Reponse)
+
+    def __str__(self):
+        return self.description
 
 class Image(models.Model):
     cleImage = models.IntegerField().primary_key = True

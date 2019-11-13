@@ -6,7 +6,7 @@ Il faut tout d'abord créer son propre environnement virtuel (qui doit écraser 
 Et se mettre sur l'environnement virtuel :
     source myvenv/bin/activate
 
-Mot de passe page admin : azerty1234
+Mot de passe passe admin : azerty1234
 
 Pour lancer le serveur :
     python manage.py runserver
