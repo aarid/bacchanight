@@ -19,7 +19,9 @@ class Post(models.Model):
 
 #Ibrahim
 class Joueur(models.Model):
-    a = 0
+    cleJoueur = models.IntegerField(primary_key = True)
+    nomJoueur = models.CharField(max_length = 50)
+    passe = models.CharField(max_length = 100)
 
 #Aguibou
 class Question(models.Model):
@@ -39,7 +41,6 @@ class Image(models.Model):
     joueurs = models.ManyToManyField(Joueur, related_name="images", blank=True)
     questions = models.ManyToManyField(Question, related_name="images", blank=True)
     
-
     def afficher_image(self):
         # Pas totalement fini, 1ere étape...
         print(self.image)
@@ -50,3 +51,10 @@ class Image(models.Model):
 
     def __str__(self):
         return self.title
+
+class Avis(models.Model):
+    cleAvis = models.IntegerField(primary_key = True)
+    aime = models.BooleanField()
+    commentaire = models.CharField(max_length = 500)
+    cleJoueur = models.ForeignKey(Joueur,on_delete = models.CASCADE)
+    cleImage = models.ForeignKey(Image,on_delete = models.CASCADE)
