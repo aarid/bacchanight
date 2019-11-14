@@ -8,7 +8,7 @@ Et se mettre sur l'environnement virtuel :
     python -m pip install --upgrade pip
 
 Il faut aussi installer la bibliothèque Pillow avec :
-    sudo pip install Pillow
+    pip install Pillow (avec sudo pour ordi perso)
 
 Mot de passe page admin : azerty1234
 Mot de passe passe admin : azerty1234
