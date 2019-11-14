@@ -20,7 +20,7 @@ class Post(models.Model):
 #Ibrahim
 class Joueur(models.Model):
     cleJoueur = models.IntegerField(primary_key=True)
-    nomJoueur = models.CharField(max_length= 50)
+    nomJoueur = models.CharField(max_length= 50, null=True)
     motDePasse = models.CharField(max_length= 100, null=True)
 
     def __str__(self):
