@@ -6,6 +6,7 @@ Il faut tout d'abord créer son propre environnement virtuel (qui doit écraser 
 Et se mettre sur l'environnement virtuel :
     source myvenv/bin/activate
     python -m pip install --upgrade pip
+    pip install -r requirements.txt
 
 Il faut aussi installer la bibliothèque Pillow avec :
     pip install Pillow (avec sudo pour ordi perso)
