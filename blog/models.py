@@ -19,9 +19,12 @@ class Post(models.Model):
 
 #Ibrahim
 class Joueur(models.Model):
-    cleJoueur = models.IntegerField(primary_key = True)
-    nomJoueur = models.CharField(max_length = 50)
-    passe = models.CharField(max_length = 100)
+    cleJoueur = models.IntegerField(primary_key=True)
+    nomJoueur = models.CharField(max_length= 50)
+    motDePasse = models.CharField(max_length= 100, null=True)
+
+    def __str__(self):
+        return self.nomJoueur
 
 #Aguibou
 class Reponse(models.Model):
@@ -67,6 +70,9 @@ class Image(models.Model):
 class Avis(models.Model):
     cleAvis = models.IntegerField(primary_key = True)
     aime = models.BooleanField()
-    commentaire = models.CharField(max_length = 500)
+    commentaire = models.CharField(max_length = 500, null=True)
     cleJoueur = models.ForeignKey(Joueur,on_delete = models.CASCADE)
     cleImage = models.ForeignKey(Image,on_delete = models.CASCADE)
+
+    def __str__(self):
+        return self.commentaire
