@@ -3,19 +3,18 @@ J'ai fait ce fichier pour qu'on ne galère pas à chercher les commandes à chaq
 Il faut tout d'abord créer son propre environnement virtuel (qui doit écraser myvenv):
     python3 -m venv myvenv
 
-Et se mettre sur l'environnement virtuel :
     source myvenv/bin/activate
-    python -m pip install --upgrade pip
+    python -m pip install --upgrade pip  (ou python3 et pip3 aussi)
     pip install -r requirements.txt
 
 Il faut aussi installer la bibliothèque Pillow avec :
-    pip install Pillow (avec sudo pour ordi perso)
+    pip3 install Pillow (avec sudo pour ordi perso)
 
 Mot de passe page admin : azerty1234
 Mot de passe passe admin : azerty1234
 
 Pour lancer le serveur :
-    python manage.py runserver
+    python manage.py runserver ou python3 manage.py runserver
 
 Adresse des pages : 
     Page d'accueuil : http://127.0.0.1:8000
