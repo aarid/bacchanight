@@ -10,9 +10,10 @@
   <header>
       <nav class="navbar navbar-dark bg-dark">
           <span class="navbar-toggler-icon"></span>
-      <a href="page_acceuil.html">
+      <a href="#" onClick="history.back()">
       <div style="text-align: left">
-      <img src="Akinator.jpg" href="page_acceuil.html" alt="Logo" width="100" height="50">
+        {% load static %} 
+        <img src="{% static 'img_site/imagee.jpg' %}" alt="Logo" width="100" height="50">
       </a></div>
       </div></nav>
     </header>
