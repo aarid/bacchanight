@@ -20,7 +20,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-# #Ibrahim
+#Ibrahim
 class Joueur(models.Model):
     cleJoueur= models.IntegerField(primary_key = True)
     nomJoueur = models.CharField(max_length= 50, null=True)
@@ -38,6 +38,7 @@ class Reponse(models.Model):
 class Question(models.Model):
     cleQuestion = models.IntegerField(primary_key = True)
     descriptionQuestion = models.CharField(max_length=200)
+    typeQuestion = models.CharField(max_length=200)
 
     reponses = models.ManyToManyField(Reponse, through='Associer')
     
@@ -48,6 +49,7 @@ class Question(models.Model):
 class Associer(models.Model):
     reponse = models.ForeignKey(Reponse, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+
 
 class Image(models.Model):
     cleImage = models.IntegerField(primary_key = True)
@@ -70,9 +72,23 @@ class Concerner(models.Model):
     image = models.ForeignKey(Image, on_delete = models.CASCADE)
     question = models.ForeignKey(Question, on_delete = models.CASCADE) 
 
+#la table tag
+class Tag(models.Model):
+    cleTag = models.IntegerField(primary_key = True)
+    tag = models.CharField(max_length=200)
+
+    image = models.ManyToManyField(Image, through='Contenir')
+
+
+#la table de liaison image tag
+class Contenir(models.Model):
+    image = models.ForeignKey(Image, on_delete = models.CASCADE)
+    tag = models.ForeignKey(Tag, on_delete = models.CASCADE)
+
 class Avis(models.Model):
     cleAvis = models.IntegerField(primary_key = True)
     aime = models.BooleanField(default=False)
     commentaire = models.CharField(max_length = 500, null=True)
     cleJoueur = models.ForeignKey(Joueur,on_delete = models.CASCADE)
     cleImage = models.ForeignKey(Image,on_delete = models.CASCADE)
+
