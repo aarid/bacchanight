@@ -12,30 +12,36 @@ body {
 
 .menu {
     text-align : center;
+    padding-top: 5%;
+    padding-right: 22%;
 }
 
 .conteneur_bulle
 {
-    margin:10px;
-    width:350px;
+    margin:3%;
+    width:80%;
     background:rgb(176, 228, 230);
-    height:200px;
+    height:150px;
     text-align:center;
-    border-radius:100px;
-    line-height: 10px; /* 100 - 10 */;
-    padding-top: 80px;
+    border-radius:80%;
+    line-height: 10%; /* 100 - 10 */;
+    padding-top: 10%;
     /* padding_top + height = width */
 }
 .bulle{
-    float: right;
-    padding-right: 600px;
+    padding-left: 25%;
+    padding-right: 45%;
     
 }
 
- .akinator_img {
-     padding-left: 385px;
-     /*padding-top: 120px;*/
+ .akinator_perso {
+     padding-left: 20%;
+     padding-top: 10%;
  }
+
+ .akinator_img {
+    float: left;
+}
 
  footer {
      
@@ -46,7 +52,7 @@ body {
     
  }
 
- ul {
+ ul.footer {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
@@ -55,12 +61,12 @@ body {
     width: max-content;
   }
   
-  li {
+  li.footer {
     float: left;
   }
   
-  li a {
-    width: 250px;
+  .footer a {
+    width: 383px;
     display: inline-block;
     color: white;
     text-align: center;
