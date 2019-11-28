@@ -53,7 +53,7 @@ class Image(models.Model):
     cleImage = models.IntegerField(primary_key = True)
     image = models.ImageField()
     auteur = models.CharField(max_length=100)
-    date_creation = models.DateTimeField(default=timezone.now) 
+    date_creation = models.CharField(max_length=20)
     designation = models.CharField(max_length=100)
     matiere_technique = models.CharField(max_length=100)
     domaine = models.CharField(max_length=50)
