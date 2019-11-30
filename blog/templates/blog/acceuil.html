@@ -1,0 +1,72 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="{% static 'css/style_acceuil.css' %}">
+
+    <title>Baccanator</title>
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#" onClick="history.back()">
+                <img src="{% static 'img_site/text_akin.png' %}" alt="Acceuil" width="90" height="70">
+            </a>
+        </nav>
+
+    </header>
+    <section id="global">
+
+        <div class="container">
+
+            <div class="row ">
+
+                <div class="personnage">
+                    <img src="{% static 'img_site/akin1.png' %}" alt="Image narrateur" />
+                </div>
+
+                <div class="col-md-8 col-md-offset-0 col-sm-12 col-sm-offset-7 col-xs-12 col-xs-offset-7">
+                    <div class="talk-bubble tri-right left-top ">
+                        <div class="talktext ">
+                            <p>Bonjour cher apprentit! Pense à un tableau du musée. <br> Je vais tenter de le deviner</p>
+                        </div>
+                    </div>
+
+                    <div class="data-base-answers">
+                        <ul>
+                            <li><a href="jouer">Jouer</a> </li>
+                            <li><a href="#">Options</a> </li>
+                            <li><a href="#">Parodies</a> </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="footer_nav navbar ">
+            <a href="# ">Acceuil</a>
+            <a href="# ">Nous contacter</a>
+            <a href="# ">Mentions légales</a>
+            <a href="# ">Qui somme-nous ?</a>
+            <a href="# ">FAQ</a>
+        </div>
+    </footer>
+</body>
+
+</html>

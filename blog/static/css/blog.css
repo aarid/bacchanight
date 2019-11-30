@@ -5,12 +5,13 @@
  }
 
 body {
-    background-color:white;
     background-image:url(../img_site/blue.jpg);
     background-size: 100% auto;
+    width :100% ;
 }
 
 .menu {
+    width :60% ;
     text-align : center;
     padding-top: 5%;
     padding-right: 22%;
@@ -37,6 +38,7 @@ body {
  .akinator_perso {
      padding-left: 20%;
      padding-top: 10%;
+     width :20% ;
  }
 
  .akinator_img {
@@ -58,7 +60,6 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #363535;
-    width: max-content;
   }
   
   li.footer {
@@ -66,10 +67,9 @@ body {
   }
   
   .footer a {
-    width: 383px;
+    width: auto;
     display: inline-block;
     color: white;
     text-align: center;
     padding: 10px;
-    text-decoration: none;
   }

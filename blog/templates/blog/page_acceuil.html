@@ -12,8 +12,57 @@
         <ul>
             <li><a href="jouer">Jouer</a> </li>
             <li><a href="#">Options</a> </li>
-            <li><a href="#">Parodies</a> </li> 
+            <li><a href="#">Parodies</a> </li>
         </ul>
     </h2>
 </div>
 {% endblock %}
+<!DOCTYPE html> {% load static %}
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Baccanator</title>
+</head>
+
+<body>
+    <div class="akinator_perso">
+
+        <div class="akinator_img">
+            <img src="{% static 'img_site/akin1.png' %}" alt="akinator_img" height="150%" width="150%" />
+        </div>
+        <!--
+            <div class="bulle">
+                {% block bulle %}
+                {% endblock %}
+            </div>
+            -->
+    </div>
+
+    <div class="menu">
+        {% block menu %}
+        {% endblock %}
+    </div>
+
+    <div>
+        <footer>
+            <ul class="footer">
+                <li class="footer"><a href="#">Acceuil</a> </li>
+                <li class="footer"> <a href="#">Nous contacter</a> </li>
+                <li class="footer"> <a href="#">Mentions légales</a> </li>
+                <li class="footer"> <a href="#">Qui somme-nous ?</a> </li>
+                <li class="footer"> <a href="#">FAQ</a> </li>
+            </ul>
+        </footer>
+    </div>
+
+</body>
+
+
+
+</html>
