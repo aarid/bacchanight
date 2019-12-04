@@ -8,6 +8,6 @@ def post_list(request):
 
 def jouer(request):
     question = Question.objects.get(cleQuestion=1)
-    associee = Associer.objects.get(question = question)
+    associee = Associer.objects.filter(question = question)
 
     return render(request, 'blog/liens.html', {'question': question, 'associee': associee})
