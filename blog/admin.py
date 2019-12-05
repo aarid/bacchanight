@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Reponse, Question, Associer, Image, Joueur, Avis, Concerner, Tag, Contenir
+from .models import Post, Reponse, Question, Associer, Image, Joueur, Avis, Tag, Contenir, Concerner
 
 admin.site.register(Post)
 admin.site.register(Image)
