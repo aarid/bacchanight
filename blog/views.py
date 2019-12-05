@@ -5,6 +5,7 @@ from django.db.models import Count
 # Create your views here.
 
 def post_list(request):
+    #print( request.POST["bidule"] )
     return render(request, 'blog/acceuil.html', {})
 
 def jouer(request):

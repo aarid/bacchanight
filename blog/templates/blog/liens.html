@@ -36,7 +36,11 @@
         <p>{{ question.descriptionQuestion }} </p>
 
         {% for a in associee %}
-        <p> <a href="after_reponse">{{ a.reponse.descriptionReponse }} </a></p>
+        <form action="/jouer/after_reponse/" id="chose" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="bidule" value="truc"/>            
+        </form>
+        <p> <a href="javascript:document.getElementById('chose').submit();">{{ a.reponse.descriptionReponse }} </a></p>
         {% endfor %}
 
 
