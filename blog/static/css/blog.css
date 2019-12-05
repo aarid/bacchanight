@@ -1,3 +1,11 @@
+/*body {
+    margin-top: 50px;
+    /*uniquement dans le cas d'une navbar-fixed-bottom */
+    /* margin-bottom: 50px; 
+}*/
+
+
+/*  
  h2 a {
      color: #DAA520;
      font-family: 'Lobster';
@@ -10,13 +18,14 @@ body {
     width :100% ;
 }
 
-.menu {
-    width :60% ;
+.menu {navbar-fixed-top
     text-align : center;
     padding-top: 5%;
     padding-right: 22%;
 }
 
+..>
+..>
 .conteneur_bulle
 {
     margin:3%;
@@ -26,15 +35,14 @@ body {
     text-align:center;
     border-radius:80%;
     line-height: 10%; /* 100 - 10 */;
-    padding-top: 10%;
-    /* padding_top + height = width */
-}
+    /*  padding-top: 10%;
+    padding_top + height = width */
+/* }
 .bulle{
     padding-left: 25%;
     padding-right: 45%;
     
-}
-
+  ..>
  .akinator_perso {
      padding-left: 20%;
      padding-top: 10%;
@@ -72,4 +80,4 @@ body {
     color: white;
     text-align: center;
     padding: 10px;
-  }
+  } */ 
