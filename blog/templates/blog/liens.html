@@ -36,11 +36,12 @@
         <p>{{ question.descriptionQuestion }} </p>
 
         {% for a in associee %}
-        <form action="/jouer/" id="chose" method="POST">
+        <form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
             {% csrf_token %}
-            <input type="hidden" type="text" name="bidule" value="truc" />
+            <input type="hidden" name="reponse" value="{{ a.reponse.descriptionReponse }}" />
         </form>
-        <p> <a href="javascript:document.getElementById('chose').submit();">{{ a.reponse.descriptionReponse }} </a></p>
+
+        <p> <a href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a></p>
         {% endfor %}
 
 
