@@ -1,7 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block entete %}
+{% extends 'base.html' %} {% load static %} {% block entete %}
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container col-sm-12 entete">
@@ -21,9 +18,7 @@
     </nav>
 
 </header>
-{% endblock %}
-
-{% block question %}
+{% endblock %} {% block question %}
 
 <div class="container">
     <div class="row">
@@ -39,7 +34,7 @@
 
                 <div class="col d-inline talk-bubble tri-right round border left-top">
                     <div class="talktext">
-                        <p>Pense à un tableau du musée, je vais tenter de le deviner</p>
+                        <p>{{ question.descriptionQuestion }} </p>
                     </div>
                 </div>
             </div>
@@ -49,30 +44,14 @@
     </div>
 </div>
 
-{% endblock %}
+{% endblock %} {% block reponse %} {% for a in associee %}
+<form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="reponse" value="{{ a.reponse.descriptionReponse }}" />
+</form>
 
-{% block reponse %}
-<div class="container ">
-    <div class="row millieu">
-        <table>
-            <tr>
-                <a href="rep1"> Rep1 </a><br>
-            </tr>
-            <tr>
-                <a href="rep2"> Rep2 </a><br>
-            </tr>
-            <tr>
-                <a href="rep3"> Rep3 </a><br>
-            </tr>
-            <tr>
-                <a href="rep4"> Rep4 </a>
-            </tr>
-        </table>
-    </div>
-</div>
-{% endblock %}
-
-{% block menu %}
+<p> <a href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a></p>
+{% endfor %} {% endblock %} {% block menu %}
 <div class="menu">
     <h2>
         <ul>
