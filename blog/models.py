@@ -62,15 +62,9 @@ class Image(models.Model):
     titre = models.CharField(max_length=200)
     sujet = models.TextField()
     
-    questions = models.ManyToManyField(Question, through='Concerner')
-    
 #     def afficher_image(self):
 #         # Pas totalement fini, 1ere étape...
 #         print(self.image)
-        
-class Concerner(models.Model):
-    image = models.ForeignKey(Image, on_delete = models.CASCADE)
-    question = models.ForeignKey(Question, on_delete = models.CASCADE) 
 
 #la table tag
 class Tag(models.Model):
@@ -78,6 +72,11 @@ class Tag(models.Model):
     tag = models.CharField(max_length=200)
 
     image = models.ManyToManyField(Image, through='Contenir')
+    questions = models.ManyToManyField(Question, through='Concerner')
+
+class Concerner(models.Model):
+    tag = models.ForeignKey(Tag, on_delete = models.CASCADE)
+    question = models.ForeignKey(Question, on_delete = models.CASCADE) 
 
 
 #la table de liaison image tag
