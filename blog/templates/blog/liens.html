@@ -38,7 +38,7 @@
         {% for a in associee %}
         <form action="/jouer/" id="chose" method="POST">
             {% csrf_token %}
-            <input type="hidden" name="bidule" value="truc" />
+            <input type="hidden" type="text" name="bidule" value="truc" />
         </form>
         <p> <a href="javascript:document.getElementById('chose').submit();">{{ a.reponse.descriptionReponse }} </a></p>
         {% endfor %}
