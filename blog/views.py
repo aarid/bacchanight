@@ -38,7 +38,7 @@ def jouer(request):
     #   q = Associer.objects.annotate(number_of_entries = Count('question'))
         q = Associer.objects.filter(question = question).count()
 
-    return render(request, 'blog/liens.html', {'question': question, 'associee': associee})
+    return render(request, 'blog/jouer.html', {'question': question, 'associee': associee})
 
 
 def after_reponse(request):
