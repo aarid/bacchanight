@@ -27,7 +27,7 @@ def jouer(request):
     q = Associer.objects.filter(question = question).count()
     #tag = 
 
-    return render(request, 'blog/liens.html', {'question': question, 'associee': associee})
+    return render(request, 'blog/jouer.html', {'question': question, 'associee': associee})
 
 
 def after_reponse(request):

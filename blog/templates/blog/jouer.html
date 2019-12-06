@@ -1,8 +1,74 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block bulle %}
-<div class="conteneur_bulle">
-    <h2> Pense à un tableau du musée. <br> Je vais tenter de le deviner </h2>
+{% block entete %}
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container col-sm-12 entete">
+            <div class="navbar-header col-sm-8">
+                <a class="navbar-brand " href="#">Bacchanator</a>
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse col">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Accueil</a></li>
+                    <li><a href="#about">Nous contacter</a></li>
+                    <li><a href="#contact">Qui sommes nous</a></li>
+                    <li><a href="#contact">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+{% endblock %}
+
+{% block question %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"> </div>
+
+        <div class="col-sm-8">
+            <div class="row">
+
+                <div class="col-sm-4 personnage d-inline d-sm-inline-block">
+                    <img src="{% static 'img_site/akin1.png' %}" alt="Image narrateur" />
+                </div>
+                <div class="col"> </div>
+
+                <div class="col d-inline talk-bubble tri-right round border left-top">
+                    <div class="talktext">
+                        <p>Pense à un tableau du musée, je vais tenter de le deviner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2"> </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block reponse %}
+<div class="container ">
+    <div class="row millieu">
+        <table>
+            <tr>
+                <a href="rep1"> Rep1 </a><br>
+            </tr>
+            <tr>
+                <a href="rep2"> Rep2 </a><br>
+            </tr>
+            <tr>
+                <a href="rep3"> Rep3 </a><br>
+            </tr>
+            <tr>
+                <a href="rep4"> Rep4 </a>
+            </tr>
+        </table>
+    </div>
 </div>
 {% endblock %}
 
@@ -12,7 +78,7 @@
         <ul>
             <li><a href="jouer">Jouer</a> </li>
             <li><a href="#">Options</a> </li>
-            <li><a href="#">Parodies</a> </li> 
+            <li><a href="#">Parodies</a> </li>
         </ul>
     </h2>
 </div>
