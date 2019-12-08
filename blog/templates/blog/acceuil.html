@@ -30,7 +30,6 @@
                     </button> -->
                     <a class="navbar-brand " href="#">Bacchanator</a>
                 </div>
-
                 <div id="navbar" class="collapse navbar-collapse col">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Accueil</a></li>
@@ -53,12 +52,14 @@
                 <div class="row">
 
                     <div class="col-sm-4 personnage d-inline d-sm-inline-block">
-                        <img src="{% static 'img_site/akin1.png' %}" alt="Image narrateur" />
+                        <img src="{% static 'img_site/man_with_the_hand.png' %}" alt="Image narrateur" width="380" height="500" />
                     </div>
 
-                    <div class="col d-inline talk-bubble tri-right round border btm-left">
-                        <div class="talktext">
-                            <p>Bonjour, je suis Bacchanator</p>
+                    <div class="left_bubble">
+                        <div class="col d-inline talk-bubble tri-right round border btm-left">
+                            <div class="talktext">
+                                <p>Bonjour, je suis Bacchanator</p>
+                            </div>
                         </div>
                     </div>
 
@@ -76,19 +77,13 @@
             <div class="col-sm-2"> </div>
         </div>
     </div>
-    
+
     <div class="container ">
         <div class="row millieu">
-            <a href="jouer">
-                <button type="button" class="btn btn-link">Jouer</button>
-            </a><br>
-            <a href="jouer">
-                <button type="button" class="btn btn-link">Options</button>
-            </a><br>
-            <a href="jouer">
-                <button type="button" class="btn btn-link">Parodies</button>
-            </a>
-
+            <h2>
+                <a href="jouer">Jouer</a> <br> <br>
+                <a href="jouer"> Parodies  </a>
+            </h2>
         </div>
 
     </div>
