@@ -20,14 +20,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-#Ibrahim
 class Joueur(models.Model):
     cleJoueur= models.IntegerField(primary_key = True)
     nomJoueur = models.CharField(max_length= 50, null=True)
     motDePasse = models.CharField(max_length=50, null=True)
 
 
-#Aguibou
 class Reponse(models.Model):
     cleReponse = models.IntegerField(primary_key=True)
     descriptionReponse = models.CharField(max_length= 200)
