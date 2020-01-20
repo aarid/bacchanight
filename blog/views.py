@@ -7,13 +7,30 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 def post_list(request):
-    #print( request.POST["bidule"] )
+
+    return render(request, 'base.html', {})
+
+# Méthode qui retourne la page d'accueil
+def accueil(request):
     contain = Contenir.objects.all()
     next_questions = Concerner.objects.all()
     #print(contain)
     #print(next_questions)
     return render(request, 'blog/acceuil.html', {'contain': contain, 'next_questions': next_questions})
 
+# Méthode qui retourne la page Nous contacter
+def contacter(request):
+    return render(request, 'blog/contacter.html', {})
+
+# Méthode qui retourne la page faq
+def faq(request):
+    return render(request, 'blog/faq.html', {})
+
+# Méthode qui retourne la page faq
+def qui_sommes_nous(request):
+    return render(request, 'blog/qui_sommes_nous.html', {})
+
+# Méthode qui retourne la page jouer
 def jouer(request):
     question = None
     associee = None

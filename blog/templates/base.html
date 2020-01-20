@@ -1,12 +1,13 @@
-<!DOCTYPE html> {% load static %}
-<html lang="fr">
+<!DOCTYPE html> 
 
+{% load static %}
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bacchanator</title>
+    <title>{% block titre %} Bacchanator {% endblock %}</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -17,15 +18,31 @@
 </head>
 
 <body>
-    {% block entete %} {% endblock %} {% block question %} {% endblock %} {% block reponse %} {% endblock %}
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container col-sm-12 entete">
+                <div class="navbar-header col-sm-8"> <a class="navbar-brand " href="{% url 'base' %}">Bacchanator</a> </div>
 
+                <div id="navbar" class="collapse navbar-collapse col">
+                    <ul class="nav navbar-nav">
+                        <li class="active"> <a href="{% url 'lien_accueil' %}">Accueil</a> </li>
+                        <li><a href="{% url 'contacter' %}">Nous contacter</a></li>
+                        <li><a href="{% url 'qui_sommes_nous' %}">Qui sommes nous</a></li>
+                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block corps %} {% endblock %}  <!--    Pour le contenu de la page    -->
+    {% block question %} {% endblock %} <!--    Block pour les questions    -->
+    {% block reponse %} {% endblock %}  <!--    Block pour les reponses    -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
 </body>
-
 
 </html>

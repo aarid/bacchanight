@@ -1,184 +1,36 @@
-<!DOCTYPE html> {% load static %}
-<html lang="fr">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
 
-    <title>Bacchanator</title>
+{% block titre %}Accueil{% endblock %}
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+{% block corps %}
+<div class="container">
+    <div class="col-sm-2"> </div>
 
-    <!--    Nos propres code css    -->
-    <link rel="stylesheet" href="{% static 'css/accueil.css' %}">
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container col-sm-12 entete">
-                <div class="navbar-header col-sm-8">
-                    <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button> -->
-                    <a class="navbar-brand " href="#">Bacchanator</a>
-                </div>
-                <div id="navbar" class="collapse navbar-collapse col">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Accueil</a></li>
-                        <li><a href="#about">Nous contacter</a></li>
-                        <li><a href="#contact">Qui sommes nous</a></li>
-                        <li><a href="#contact">FAQ</a></li>
-                    </ul>
-                </div>
+    <div class="col-sm-4">
+        <div class="col-sm-4 personnage d-inline d-sm-inline-block">
+            <img src="{% static 'img_site/man_with_the_hand.png' %}" alt="Image narrateur" width="320" height="360" />
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="left_bubble">
+            <div class="col d-inline talk-bubble tri-right round border btm-left">
+                <div class="talktext"> <p>Bonjour, je suis Bacchanator</p> </div>
             </div>
-        </nav>
+        </div>
 
-    </header>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2"> </div>
-
-            <div class="col-sm-8">
-
-                <div class="row">
-
-                    <div class="col-sm-4 personnage d-inline d-sm-inline-block">
-                        <img src="{% static 'img_site/man_with_the_hand.png' %}" alt="Image narrateur" width="380" height="500" />
-                    </div>
-
-                    <div class="left_bubble">
-                        <div class="col d-inline talk-bubble tri-right round border btm-left">
-                            <div class="talktext">
-                                <p>Bonjour, je suis Bacchanator</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col d-inline talk-bubble tri-right round border left-top">
-                        <div class="talktext">
-                            <p>Pense à un tableau du musée, je vais tenter de le deviner</p>
-                        </div>
-                    </div>
-
-                </div>
-
+        <div class="col d-inline talk-bubble tri-right round border left-top">
+            <div class="talktext">
+                <p>Pense à un tableau du musée, je vais tenter de le deviner</p>
             </div>
+        </div>
 
-            <div class="col-sm-2"> </div>
+        <div class="millieu">
+            <h2> <a href="{% url 'play_button' %}">Jouer</a> <br> <br> </h2>
         </div>
     </div>
 
-    <div class="container ">
-        <div class="row millieu">
-            <h2>
-                <a href="jouer">Jouer</a> <br> <br>
-                <a href="jouer"> Parodies  </a>
-            </h2>
-        </div>
-
-    </div>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-</body>
-
-<!-- <footer class="pied">
-    <div class="col-sm-12 h4">
-        <a href="# ">Acceuil</a>
-        <a href="# ">Nous contacter</a>
-        <a href="# ">Qui somme-nous ?</a>
-        <a href="# ">FAQ</a>
-    </div>
-</footer> -->
-
-</html>
-
-
-
-
-<!-- <!DOCTYPE html> {% load static %}
-<html>
-
-<head>
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="{% static 'css/style_acceuil.css' %}">
-
-    <title>Baccanator</title>
-
-</head>
-
-<body>
-    <header>
-
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#" onClick="history.back()">
-                <img src="{% static 'img_site/text_akin.png' %}" alt="Acceuil" width="90" height="70">
-            </a>
-        </nav>
-
-    </header>
-    <section id="global">
-
-        <div class="container">
-
-            <div class="row ">
-
-                <div class="personnage">
-                    <img src="{% static 'img_site/akin1.png' %}" alt="Image narrateur" />
-                </div>
-
-                <div class="col-md-8 col-md-offset-0 col-sm-12 col-sm-offset-7 col-xs-12 col-xs-offset-7">
-                    <div class="talk-bubble tri-right left-top ">
-                        <div class="talktext ">
-                            <p>Bonjour cher apprentit! Pense à un tableau du musée. <br> Je vais tenter de le deviner</p>
-                        </div>
-                    </div>
-
-                    <div class="data-base-answers">
-                        <ul>
-                            <li><a href="jouer">Jouer</a> </li>
-                            <li><a href="#">Options</a> </li>
-                            <li><a href="#">Parodies</a> </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-            <div class="clear"></div>
-
-        </div>
-
-    </section>
-
-    <footer>
-
-        <div class="footer_nav navbar ">
-            <a href="# ">Acceuil</a>
-            <a href="# ">Nous contacter</a>
-            <a href="# ">Mentions légales</a>
-            <a href="# ">Qui somme-nous ?</a>
-            <a href="# ">FAQ</a>
-        </div>
-    </footer>
-</body>
-
-</html> -->
+    <div class="col-sm-2"> </div>
+</div>
+{% endblock %}
