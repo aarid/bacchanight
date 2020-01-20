@@ -7,14 +7,16 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 def post_list(request):
-    #print( request.POST["bidule"] )
-    #request.session['contain'] = Contenir.objects.all()
-    #request.session['next_questions'] = Concerner.objects.all()
+
     return render(request, 'base.html', {})
 
 # Méthode qui retourne la page d'accueil
 def accueil(request):
-    return render(request, 'blog/acceuil.html', {})
+    contain = Contenir.objects.all()
+    next_questions = Concerner.objects.all()
+    #print(contain)
+    #print(next_questions)
+    return render(request, 'blog/acceuil.html', {'contain': contain, 'next_questions': next_questions})
 
 # Méthode qui retourne la page Nous contacter
 def contacter(request):
@@ -30,29 +32,35 @@ def qui_sommes_nous(request):
 
 # Méthode qui retourne la page jouer
 def jouer(request):
-    #contain = request.session.get('contain')
-    #next_questions = request.session.get('next_questions')
+    question = None
+    associee = None
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = AnswerForm(request.POST)
         # check whether it's valid:
+        print(form)
         if form.is_valid():
             reponse = form.cleaned_data['reponse']
             print(reponse)
+            
+            contain = form.cleaned_data['contain']
+            print(contain)
+            next_questions = form.cleaned_data['next_questions']
+            print(next_questions)
+            
             tag = Tag.objects.filter(tag = reponse)
             
-            #contain = contain.filter(tag = tag)
+            contain = contain.filter(tag = tag)
             
-            #next_questions = next_questions.filter(tag = tag)
+            next_questions = next_questions.filter(tag = tag)
 
-            question =  Question.objects.get(cleQuestion=2)
+            question =  next_questions[0]
             associee = Associer.objects.filter(question = question)
-
-    else : 
+    else:
         form = AnswerForm()
         question = Question.objects.get(cleQuestion=1)
         associee = Associer.objects.filter(question = question)
-    #   q = Associer.objects.annotate(number_of_entries = Count('question'))
+        #q = Associer.objects.annotate(number_of_entries = Count('question'))
         q = Associer.objects.filter(question = question).count()
 
     return render(request, 'blog/jouer.html', {'question': question, 'associee': associee})
