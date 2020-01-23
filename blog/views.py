@@ -10,25 +10,25 @@ from django.core import serializers
 def post_list(request):
     return render(request, 'base.html', {})
 
-# Méthode qui retourne la page d'accueil
+# Méthode qui retourne la page "accueil"
 def accueil(request):
     request.session['contain'] = serializers.serialize("xml", Contenir.objects.all())
     request.session['next_questions'] = serializers.serialize("xml", Concerner.objects.all())
     return render(request, 'blog/acceuil.html')
 
-# Méthode qui retourne la page Nous contacter
+# Méthode qui retourne la page "Nous contacter"
 def contacter(request):
     return render(request, 'blog/contacter.html', {})
 
-# Méthode qui retourne la page faq
+# Méthode qui retourne la page "faq"
 def faq(request):
     return render(request, 'blog/faq.html', {})
 
-# Méthode qui retourne la page faq
+# Méthode qui retourne la page "qui sommes nous"
 def qui_sommes_nous(request):
     return render(request, 'blog/qui_sommes_nous.html', {})
 
-# Méthode qui retourne la page jouer
+# Méthode qui retourne la page "jouer"
 def jouer(request):
     question = None
     associee = None

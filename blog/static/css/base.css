@@ -1,11 +1,13 @@
 /* General CSS Setup */
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: lightblue;
+    overflow-x:scroll; /* on empeche le defillement horizontall */
+    overflow-y:hidden; /* on accepte le defillement vertical */ 
 }
 
-h2 a {
-    color: rgb(12, 11, 8);
-    font-family: 'Lobster';
+.bouton {
+    color: black;
     font-size: 36px;
 }
 
@@ -79,7 +81,7 @@ h2 a {
 .millieu {
     position: relative;
     padding-top: 200px;
-    padding-left: 80px;
+    padding-left: 60px;
 }
 
 h3 a {

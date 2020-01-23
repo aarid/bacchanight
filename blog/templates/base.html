@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
             <div class="container col-sm-12 entete">
                 <div class="navbar-header col-sm-8"> <a class="navbar-brand " href="{% url 'base' %}">Bacchanator</a> </div>
 
@@ -36,8 +36,9 @@
     </header>
 
     {% block corps %} {% endblock %}  <!--    Pour le contenu de la page    -->
-    {% block question %} {% endblock %} <!--    Block pour les questions    -->
-    {% block reponse %} {% endblock %}  <!--    Block pour les reponses    -->
+    {% block question %}    <!--    Block pour les questions    -->
+        {% block reponse %} {% endblock %}  <!--    Block pour les reponses correspondantes à la question   -->
+    {% endblock %} <!--    Fin block pour les questions    -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
