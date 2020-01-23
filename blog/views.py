@@ -10,7 +10,7 @@ def post_list(request):
 
     return render(request, 'base.html', {})
 
-# Méthode qui retourne la page d'accueil
+# Méthode qui retourne la page "accueil"
 def accueil(request):
     contain = Contenir.objects.all()
     next_questions = Concerner.objects.all()
@@ -18,19 +18,19 @@ def accueil(request):
     #print(next_questions)
     return render(request, 'blog/acceuil.html', {'contain': contain, 'next_questions': next_questions})
 
-# Méthode qui retourne la page Nous contacter
+# Méthode qui retourne la page "Nous contacter"
 def contacter(request):
     return render(request, 'blog/contacter.html', {})
 
-# Méthode qui retourne la page faq
+# Méthode qui retourne la page "faq"
 def faq(request):
     return render(request, 'blog/faq.html', {})
 
-# Méthode qui retourne la page faq
+# Méthode qui retourne la page "qui sommes nous"
 def qui_sommes_nous(request):
     return render(request, 'blog/qui_sommes_nous.html', {})
 
-# Méthode qui retourne la page jouer
+# Méthode qui retourne la page "jouer"
 def jouer(request):
     question = None
     associee = None
