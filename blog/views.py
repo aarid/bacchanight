@@ -3,32 +3,36 @@ from .models import Question, Associer, Tag, Image, Contenir, Concerner
 from django.db.models import Count
 from .forms import AnswerForm
 from django.http import HttpResponseRedirect
-from django.core import serializers
+#from django.core import serializers
 
 # Create your views here.
 
 def post_list(request):
     return render(request, 'base.html', {})
 
-# Méthode qui retourne la page "accueil"
+# Méthode qui retourne la page d'accueil
 def accueil(request):
-    request.session['contain'] = serializers.serialize("xml", Contenir.objects.all())
-    request.session['next_questions'] = serializers.serialize("xml", Concerner.objects.all())
-    return render(request, 'blog/acceuil.html')
+    #contain = serializers.deserialize("xml", request.session['contain'])
+    #next_questions = serializers.deserialize(request.session['next_questions'])
+    contain = Contenir.objects.all()
+    next_questions = Concerner.objects.all()
+    print(contain)
+    print(next_questions)
+    return render(request, 'blog/acceuil.html', {'contain': contain, 'next_questions': next_questions})
 
-# Méthode qui retourne la page "Nous contacter"
+# Méthode qui retourne la page Nous contacter
 def contacter(request):
     return render(request, 'blog/contacter.html', {})
 
-# Méthode qui retourne la page "faq"
+# Méthode qui retourne la page faq
 def faq(request):
     return render(request, 'blog/faq.html', {})
 
-# Méthode qui retourne la page "qui sommes nous"
+# Méthode qui retourne la page faq
 def qui_sommes_nous(request):
     return render(request, 'blog/qui_sommes_nous.html', {})
 
-# Méthode qui retourne la page "jouer"
+# Méthode qui retourne la page jouer
 def jouer(request):
     question = None
     associee = None
@@ -41,10 +45,11 @@ def jouer(request):
             reponse = form.cleaned_data['reponse']
             print(reponse)
             
-            contain = serializers.deserialize("xml", request.session['contain'])
-            contain
+            #request.session['contain'] = serializers.serialize("xml", Contenir.objects.all())
+            contain = form.cleaned_data['contain']
             print(contain)
-            next_questions = serializers.deserialize("xml", request.session['next_questions'])
+            #request.session['next_questions'] = serializers.serialize("xml", Concerner.objects.all())
+            next_questions = form.cleaned_data['next_questions']
             print(next_questions)
             
             tag = Tag.objects.filter(tag = reponse)
