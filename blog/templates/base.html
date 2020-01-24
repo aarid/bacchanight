@@ -1,49 +1,57 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 {% load static %}
 <html lang="fr">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{% block titre %} Bacchanator {% endblock %}</title>
+  <title>{% block titre %} Bacchanator {% endblock %}</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-    <!--    Nos propres code css    -->
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <!--    Nos propres code css    -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 
 <body>
-    <header>
-        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
-            <div class="container col-sm-12 entete">
+  <header>
+        <nav class="navbar navbar-expand-lg navbar-light entete">
+            <div class="container col-sm-12">
                 <div class="navbar-header col-sm-8"> <a class="navbar-brand " href="{% url 'base' %}">Bacchanator</a> </div>
 
-                <div id="navbar" class="collapse navbar-collapse col">
-                    <ul class="nav navbar-nav">
-                        <li class="active"> <a href="{% url 'lien_accueil' %}">Accueil</a> </li>
-                        <li><a href="{% url 'contacter' %}">Nous contacter</a></li>
-                        <li><a href="{% url 'qui_sommes_nous' %}">Qui sommes nous</a></li>
-                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbarSupportedContent" class="collapse navbar-collapse col">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"> <a class="nav-link" href="{% url 'lien_accueil' %}">Accueil</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{% url 'contacter' %}">Nous contacter</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{% url 'qui_sommes_nous' %}">Qui sommes nous</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    {% block corps %} {% endblock %}  <!--    Pour le contenu de la page    -->
-    {% block question %}    <!--    Block pour les questions    -->
-        {% block reponse %} {% endblock %}  <!--    Block pour les reponses correspondantes à la question   -->
-    {% endblock %} <!--    Fin block pour les questions    -->
+  {% block corps %} {% endblock %}
+  <!--    Pour le contenu de la page    -->
+  {% block question %}
+  <!--    Block pour les questions    -->
+  {% block reponse %} {% endblock %}
+  <!--    Block pour les reponses correspondantes à la question   -->
+  {% endblock %}
+  <!--    Fin block pour les questions    -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
