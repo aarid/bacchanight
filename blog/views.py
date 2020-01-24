@@ -3,20 +3,18 @@ from .models import Question, Associer, Tag, Image, Contenir, Concerner
 from django.db.models import Count
 from .forms import AnswerForm
 from django.http import HttpResponseRedirect
+from django.core import serializers
 
 # Create your views here.
 
 def post_list(request):
-
     return render(request, 'base.html', {})
 
 # Méthode qui retourne la page "accueil"
 def accueil(request):
-    contain = Contenir.objects.all()
-    next_questions = Concerner.objects.all()
-    #print(contain)
-    #print(next_questions)
-    return render(request, 'blog/acceuil.html', {'contain': contain, 'next_questions': next_questions})
+    request.session['contain'] = serializers.serialize("xml", Contenir.objects.all())
+    request.session['next_questions'] = serializers.serialize("xml", Concerner.objects.all())
+    return render(request, 'blog/acceuil.html')
 
 # Méthode qui retourne la page "Nous contacter"
 def contacter(request):
@@ -43,9 +41,10 @@ def jouer(request):
             reponse = form.cleaned_data['reponse']
             print(reponse)
             
-            contain = form.cleaned_data['contain']
+            contain = serializers.deserialize("xml", request.session['contain'])
+            contain
             print(contain)
-            next_questions = form.cleaned_data['next_questions']
+            next_questions = serializers.deserialize("xml", request.session['next_questions'])
             print(next_questions)
             
             tag = Tag.objects.filter(tag = reponse)
