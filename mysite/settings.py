@@ -27,7 +27,9 @@ SECRET_KEY = '_9@#w5b!4tv@aiy2u877&!qmf^d2)f_tsbuc%uv!_52w_ip*nc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+# python manage.py runserver '0.0.0.0:8000' pour le lancer et que ça soit accesible par une autre machine du cremi
+
+ALLOWED_HOSTS = ['127.0.0.1', '.emi.u-bordeaux.fr', '.pythonanywhere.com']
 
 
 # Application definition
