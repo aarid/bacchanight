@@ -1,80 +1,42 @@
 {% extends 'base.html' %}
-<!---------------------->
+
 {% load static %}
-<!----------------------->
 
-
-{% block entete %}
-<header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container col-sm-12 entete">
-            <div class="navbar-header col-sm-8">
-                <a class="navbar-brand " href="#">Bacchanator</a>
-            </div>
-
-            <div id="navbar" class="collapse navbar-collapse col">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="./../">Accueil</a></li>
-                    <li><a href="#about">Nous contacter</a></li>
-                    <li><a href="#contact">Qui sommes nous</a></li>
-                    <li><a href="#contact">FAQ</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-</header>
-{% endblock %}
-<!-- #region -->
+{% block titre %}Jouer{% endblock %}
 
 {% block question %}
-
 <div class="container">
-    <div class="row">
-        <div class="col-sm-2"> </div>
+    <div class="col-sm-2"> </div>
 
-        <div class="col-sm-8">
-            <div class="row">
+    <div class="col-sm-4">
+        <div class="col-sm-4 personnage d-inline d-sm-inline-block">
+            <img src="{% static 'img_site/man_with_the_hand.png' %}" alt="Image narrateur" width="320" height="360" />
+        </div>
+    </div>
 
-                <div class="col-sm-4 personnage d-inline d-sm-inline-block">
-                    <img src="{% static 'img_site/man_with_the_hand.png' %}" alt="Image narrateur" width="380" height="500" />
-                </div>
-
-                <div class="col"> </div>
-                <br><br><br><br><br><br><br><br><br>
-
-                <div class="col d-inline talk-bubble tri-right round border left-top">
-                    <div class="talktext">
-                        <p>{{ question.descriptionQuestion }} </p>
-                    </div>
-                </div>
-
+    <div class="col-sm-4">
+        <div class="col d-sm-inline-block talk-bubble tri-right round border left-top">
+            <div class="talktext">
+                <p>{{ question.descriptionQuestion }} </p>
             </div>
         </div>
 
-        <div class="col-sm-2"> </div>
-    </div>
-</div>
+        {% block reponse %}
+        <div class="millieu">
+            <h2>
+                {% for a in associee %}
+                <form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="reponse" value="{{ a.reponse.descriptionReponse }}" />
+                </form>
 
-{% endblock %}
-<!---->
-
-{% block reponse %}
-<div class="container ">
-    <div class="row millieu">
-        <h2>
-            {% for a in associee %}
-            <form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
-                {% csrf_token %}
-                <input type="hidden" name="reponse" value="{{ a.reponse.descriptionReponse }}" />
-            </form>
-
-            <p> <a href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a></p>
-            {% endfor %}
-
-        </h2>
+                <p> <a class="bouton" href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a></p>
+                {% endfor %}
+            </h2>
+        </div>
+        {% endblock %}
     </div>
 
+    <div class="col-sm-2"> </div>
 </div>
-<!---->
 {% endblock %}
