@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Reponse, Question, Associer, Image, Joueur, Avis, Tag, Contenir, Concerner
+from .models import Post, Reponse, Question, Associer, Image, Tag, Contenir, Concerner
 
 admin.site.register(Post)
 
@@ -24,11 +24,6 @@ class QuestionAdmin(admin.ModelAdmin):
     model = Question
     inlines = [AssocierAdmin,]
 admin.site.register(Question, QuestionAdmin)
-
-admin.site.register(Joueur)
-class AvisAdmin(admin.ModelAdmin):
-    list_display = ('name', 'code')
-admin.site.register(Avis)
 class TagAdmin(admin.ModelAdmin):
     list_display = ('tag', 'cleTag')
     inlines = [ContenirAdmin, ConcernerAdmin,]
