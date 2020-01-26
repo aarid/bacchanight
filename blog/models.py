@@ -42,7 +42,6 @@ class Associer(models.Model):
     reponse = models.ForeignKey(Reponse, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
 
-
 class Image(models.Model):
     cleImage = models.IntegerField(primary_key = True)
     # FileFiel au lieu de image

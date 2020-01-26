@@ -53,8 +53,8 @@ def jouer(request):
             concerns = Concerner.objects.all()
             
             for i in range(1,len(tags)):
-                contain = contain.filter(tag = tags[i])
-                concerns = concerns.filter(tag = tags[i])
+                contain = contain.filter(tag = int(tags[i]))
+                concerns = concerns.filter(tag = int(tags[i]))
 
             print(contain)
             print(concerns)

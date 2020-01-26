@@ -44,3 +44,5 @@ Liens utiles pour les sites :
 
     Pour changer l'affichage de la page admin : 
         https://python.doctor/page-django-interface-admin-administration-settings-django-contrib-auth
+
+        Et aussi : https://docs.djangoproject.com/fr/3.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display
