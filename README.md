@@ -41,3 +41,6 @@ Liens utiles pour les sites :
     Queryset: https://docs.djangoproject.com/fr/3.0/ref/models/querysets/
 
     Pour les Forms : https://docs.djangoproject.com/fr/2.1/topics/forms/
+
+    Pour changer l'affichage de la page admin : 
+        https://python.doctor/page-django-interface-admin-administration-settings-django-contrib-auth
