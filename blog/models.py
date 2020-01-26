@@ -20,12 +20,6 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class Joueur(models.Model):
-    cleJoueur= models.IntegerField(primary_key = True)
-    nomJoueur = models.CharField(max_length= 50, null=True)
-    motDePasse = models.CharField(max_length=50, null=True)
-
-
 class Reponse(models.Model):
     cleReponse = models.IntegerField(primary_key=True)
     descriptionReponse = models.CharField(max_length= 200)
@@ -82,11 +76,3 @@ class Concerner(models.Model):
 class Contenir(models.Model):
     image = models.ForeignKey(Image, on_delete = models.CASCADE)
     tag = models.ForeignKey(Tag, on_delete = models.CASCADE)
-
-class Avis(models.Model):
-    cleAvis = models.IntegerField(primary_key = True)
-    aime = models.BooleanField(default=False)
-    commentaire = models.CharField(max_length = 500, null=True)
-    cleJoueur = models.ForeignKey(Joueur,on_delete = models.CASCADE)
-    cleImage = models.ForeignKey(Image,on_delete = models.CASCADE)
-
