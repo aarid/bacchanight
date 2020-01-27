@@ -1,18 +1,26 @@
-/* General CSS Setup */
+/*General CSS Setup
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: lightblue;
-    overflow-x:scroll; /* on empeche le defillement horizontall */
-    overflow-y:hidden; /* on accepte le defillement vertical */ 
-}
+    /*font-family: Georgia, 'Times New Roman', Times, serif;
+    /*background-color: lightblue;*/
+    /*overflow-x:hidden; /* on empeche le defillement horizontall */
+    /*overflow-y:hidden; /* on accepte le defillement vertical */ 
+    
+    /*margin:0;
+    padding:0;*/
+    /*-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    /*background-size: cover; /* version standardisée */
+    /*background-image: url(../img_site/background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
 
-.bouton {
+/*.bouton {
     color: black;
     font-size: 36px;
 }
 
 /* CSS talk bubble */
-.talk-bubble {
+/*.talk-bubble {
     margin: 20px;
     top: 150px;
     display: inline-block;
@@ -57,7 +65,7 @@ body {
 /*******/
 
 
-.lds-hourglass {
+/* .lds-hourglass {
     display: inline-block;
     position: relative;
     width: 80px;
@@ -87,41 +95,42 @@ body {
     100% {
       transform: rotate(1800deg);
     }
-  }
+  } */
   
 /********/
 
 
 
 /* talk bubble contents */
+/*
 .talktext {
     padding: 1em;
     text-align: center;
     line-height: 1.8em;
 }
 
-.talktext p {
+.talktext .p {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
 }
-
-.entete {
+*/
+/*.entete {
     background-color: rgb(24, 186, 192);
-}
+}*/
 
-.personnage {
+/* .personnage {
     position: relative;
     top: 160px;
     width: auto;
-}
+} */
 
-.millieu {
+/* .millieu {
     position: relative;
     padding-top: 200px;
     padding-left: 60px;
-}
+} */
 
-h3 a {
+/* h3 a {
     color: rgb(219, 191, 47);
     font-size: 36px;
-}
+} */
