@@ -54,6 +54,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
+
+# Temps d'expiration du cookie en secondes
+#SESSION_COOKIE_AGE = 600
+
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [

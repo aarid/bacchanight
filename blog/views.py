@@ -12,13 +12,8 @@ def post_list(request):
 
 # Méthode qui retourne la page d'accueil
 def accueil(request):
-    #contain = serializers.deserialize("xml", request.session['contain'])
-    #next_questions = serializers.deserialize(request.session['next_questions'])
-    contain = Contenir.objects.all()
-    next_questions = Concerner.objects.all()
-    print(contain)
-    print(next_questions)
-    return render(request, 'blog/acceuil.html', {'contain': contain, 'next_questions': next_questions})
+    request.session['tags'] = ""
+    return render(request, 'blog/acceuil.html')
 
 # Méthode qui retourne la page Nous contacter
 def contacter(request):
@@ -45,26 +40,30 @@ def jouer(request):
             reponse = form.cleaned_data['reponse']
             print(reponse)
             
-            #request.session['contain'] = serializers.serialize("xml", Contenir.objects.all())
-            contain = form.cleaned_data['contain']
-            print(contain)
-            #request.session['next_questions'] = serializers.serialize("xml", Concerner.objects.all())
-            next_questions = form.cleaned_data['next_questions']
-            print(next_questions)
-            
-            tag = Tag.objects.filter(tag = reponse)
-            
-            contain = contain.filter(tag = tag)
-            
-            next_questions = next_questions.filter(tag = tag)
+            tags = request.session['tags']
 
-            question =  next_questions[0]
+            cletag = Tag.objects.filter(tag = reponse).values_list[0][0]
+            print(cletag)
+            tags = tags + "," + str(cleTag)
+            print(tags)
+
+            tags = tags.split(",")
+
+            contain = Contenir.objects.all()
+            concerns = Concerner.objects.all()
+            
+            for i in range(1,len(tags)):
+                contain = contain.filter(tag = int(tags[i]))
+                concerns = concerns.filter(tag = int(tags[i]))
+
+            print(contain)
+            print(concerns)
+            clequestion =  concerns.values_list()[0][2]
+            question = Question.objects.all().filter( cleQuestion = cleQuestion)
             associee = Associer.objects.filter(question = question)
     else:
-        form = AnswerForm()
         question = Question.objects.get(cleQuestion=1)
         associee = Associer.objects.filter(question = question)
-        #q = Associer.objects.annotate(number_of_entries = Count('question'))
         q = Associer.objects.filter(question = question).count()
 
     return render(request, 'blog/jouer.html', {'question': question, 'associee': associee})
