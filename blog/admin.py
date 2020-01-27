@@ -37,7 +37,7 @@ class ContenirAdmin(admin.TabularInline):
 admin.site.register(Contenir, ContenirAdmin2)
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ('image', 'cleImage')
+    list_display = ('titre', 'cleImage')
 admin.site.register(Image, ImageAdmin)
 
 class AssocierAdmin2(admin.ModelAdmin):
