@@ -70,8 +70,8 @@ def jouer(request):
                 concerns = concerns.filter(tag = int(tags[i]))
 
             for i in range(len(no_tags)):
-                contain = contain.filter(tag = int(no_tags[i]))
-                concerns = concerns.filter(tag != int(no_tags[i]))
+                contain = contain.exclude(tag = int(no_tags[i]))
+                concerns = concerns.exclude(tag = int(no_tags[i]))
 
             print(contain)
             print(concerns)
