@@ -1,26 +1,35 @@
-/*General CSS Setup
+/*General CSS Setup*/
 body {
-    /*font-family: Georgia, 'Times New Roman', Times, serif;
-    /*background-color: lightblue;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
     /*overflow-x:hidden; /* on empeche le defillement horizontall */
     /*overflow-y:hidden; /* on accepte le defillement vertical */ 
     
-    /*margin:0;
-    padding:0;*/
-    /*-webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    /*background-size: cover; /* version standardisée */
-    /*background-image: url(../img_site/background1.jpg);
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    /*background-image: url(../img_site/background1.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
-}*/
+}
 
-/*.bouton {
+.header{
+    color : white;
+}
+
+.footer{
+    background-color: rgb(17, 66, 50);
+    color: white;
+}
+
+.bouton {
     color: black;
     font-size: 36px;
 }
 
 /* CSS talk bubble */
-/*.talk-bubble {
+.talk-bubble {
     margin: 20px;
     top: 150px;
     display: inline-block;
@@ -102,7 +111,7 @@ body {
 
 
 /* talk bubble contents */
-/*
+
 .talktext {
     padding: 1em;
     text-align: center;
@@ -113,24 +122,24 @@ body {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
 }
-*/
-/*.entete {
-    background-color: rgb(24, 186, 192);
-}*/
 
-/* .personnage {
+.entete {
+    background-color: rgb(17, 66, 50);
+    color: white;
+}
+.personnage {
     position: relative;
     top: 160px;
     width: auto;
-} */
+}
 
-/* .millieu {
+.millieu {
     position: relative;
     padding-top: 200px;
     padding-left: 60px;
-} */
+}
 
-/* h3 a {
+h3 a {
     color: rgb(219, 191, 47);
     font-size: 36px;
-} */
+}
