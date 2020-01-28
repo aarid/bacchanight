@@ -13,6 +13,7 @@ def post_list(request):
 # Méthode qui retourne la page d'accueil
 def accueil(request):
     request.session['tags'] = ""
+    request.session['no_tags'] = ""
     return render(request, 'blog/acceuil.html')
 
 # Méthode qui retourne la page Nous contacter
@@ -37,30 +38,48 @@ def jouer(request):
         # check whether it's valid:
         print(form)
         if form.is_valid():
-            reponse = form.cleaned_data['reponse']
-            print(reponse)
+            tag = form.cleaned_data['tag']
+            print(tag)
+            no_tag = form.cleaned_data['no_tag']
+            print(no_tag)
             
             tags = request.session['tags']
-
-            cletag = Tag.objects.filter(tag = reponse).values_list[0][0]
+            no_tags = request.session['no_tags']
+            cletag = 0
+            if tag!="":
+                cletag =  Tag.objects.all().filter(tag = tag).values_list()[0][0]
+                tags = tags + "," + str(cletag)
+            else:
+                cletag =  Tag.objects.all().filter(tag = no_tag).values_list()[0][0]
+                no_tags = no_tags + "," + str(cletag)
             print(cletag)
-            tags = tags + "," + str(cleTag)
             print(tags)
+            print(no_tags)
 
             tags = tags.split(",")
+            tags.remove('')
+
+            no_tags = no_tags.split(",")
+            no_tags.remove('')
 
             contain = Contenir.objects.all()
             concerns = Concerner.objects.all()
             
-            for i in range(1,len(tags)):
+            for i in range(len(tags)):
                 contain = contain.filter(tag = int(tags[i]))
                 concerns = concerns.filter(tag = int(tags[i]))
 
+            for i in range(len(no_tags)):
+                contain = contain.filter(tag = int(no_tags[i]))
+                concerns = concerns.filter(tag != int(no_tags[i]))
+
             print(contain)
             print(concerns)
-            clequestion =  concerns.values_list()[0][2]
-            question = Question.objects.all().filter( cleQuestion = cleQuestion)
-            associee = Associer.objects.filter(question = question)
+            if len(concerns.values_list())!=0:
+                clequestion =  concerns.values_list()[0][2]
+                question = Question.objects.all().filter( cleQuestion = clequestion)
+                print(question)
+                associee = Associer.objects.filter(question = clequestion)
     else:
         question = Question.objects.get(cleQuestion=1)
         associee = Associer.objects.filter(question = question)
