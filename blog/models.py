@@ -41,6 +41,8 @@ class Question(models.Model):
 class Associer(models.Model):
     reponse = models.ForeignKey(Reponse, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    tag = models.CharField(max_length=80, blank=True)
+    no_tag = models.CharField(max_length=80, blank=True)
 
 class Image(models.Model):
     cleImage = models.IntegerField(primary_key = True)
