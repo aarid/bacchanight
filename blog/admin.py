@@ -32,7 +32,7 @@ tag.short_description = 'Tag'
 tag.admin_order_field = 'cleTag'
 
 def image(obj):
-    return obj.image.image
+    return obj.image.titre
 
 def cleImage(obj):
     return obj.image.cleImage
