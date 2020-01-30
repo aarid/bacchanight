@@ -77,9 +77,12 @@ def jouer(request):
             print(concerns)
             if len(concerns.values_list())!=0:
                 clequestion =  concerns.values_list()[0][2]
-                question = Question.objects.all().filter( cleQuestion = clequestion)
+                question = Question.objects.all().filter( cleQuestion = clequestion)[0]
                 print(question)
                 associee = Associer.objects.filter(question = clequestion)
+                print(question.cleQuestion)
+                print(associee)
+
     else:
         question = Question.objects.get(cleQuestion=1)
         associee = Associer.objects.filter(question = question)
