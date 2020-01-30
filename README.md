@@ -46,3 +46,6 @@ Liens utiles pour les sites :
         https://python.doctor/page-django-interface-admin-administration-settings-django-contrib-auth
 
         Et aussi : https://docs.djangoproject.com/fr/3.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display
+
+    Pour l'affichage des images:
+        https://openclassrooms.com/fr/courses/1871271-developpez-votre-site-web-avec-le-framework-django/1872634-la-gestion-des-fichiers
