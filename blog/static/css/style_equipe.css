@@ -7,7 +7,7 @@ body{
   background: #f1f1f1;
   text-align: center;
 }
-.inner-width{
+.inner-width{ 
   max-width: 1200px;
   margin: auto;
   padding: 40px;
