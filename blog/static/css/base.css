@@ -46,8 +46,8 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    left: -24px;
-    right: auto;
+    right: -24px;
+    left: auto;
     top: auto;
     bottom: 2px;
     border: 28px solid;
@@ -90,8 +90,6 @@ body {
   }
   
 /********/
-
-
 
 /* talk bubble contents */
 .talktext {
