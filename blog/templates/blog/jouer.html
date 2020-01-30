@@ -1,10 +1,4 @@
-{% extends 'base.html' %}
-
-{% load static %}
-
-{% block titre %}Jouer{% endblock %}
-
-{% block question %}
+{% extends 'base.html' %} {% load static %} {% block titre %}Jouer{% endblock %} {% block question %}
 <div class="container">
     <div class="col-sm-2"> </div>
 
@@ -27,7 +21,8 @@
                 {% for a in associee %}
                 <form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
                     {% csrf_token %}
-                    <input type="hidden" name="reponse" value="{{ a.reponse.descriptionReponse }}" />
+                    <input type="hidden" name="tag" value="{{ a.tag }}" />
+                    <input type="hidden" name="no_tag" value="{{ a.no_tag }}" />
                 </form>
 
                 <p> <a class="bouton" href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a></p>

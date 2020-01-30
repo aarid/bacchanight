@@ -52,16 +52,14 @@ body {
  .akinator_img {
     float: left;
 }
-
- footer {
-     
+*/
+ /*footer {
     color: rgb(2, 43, 53);
     font-size: 20px;
     position:absolute;
     bottom: 0px;
-    
  }
-
+/*
  ul.footer {
     list-style-type: none;
     margin: 0 auto;
@@ -69,7 +67,6 @@ body {
     overflow: hidden;
     background-color: #363535;
   }
-  
   li.footer {
     float: left;
   }

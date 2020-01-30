@@ -7,8 +7,6 @@
 {% block corps %}
 <div class="container">
     <div class="col-sm-2"> </div>
-
-
     <div class="col-sm-8">
         <div class="row">
             <div class="col-sm-8">
@@ -21,31 +19,21 @@
             <div class="col-sm-4">
                 <div class="col talk-bubble tri-right round border btm-left">
                     <div class="talktext">
-                        <i><b><p>Bonjour, je suis Bacchanator</p></b></i>
+                        <p class = "p">Bonjour, je suis Bacchanator</p>
                     </div>
                 </div>
 
                 <div class="col talk-bubble tri-right round border left-top">
                     <div class="talktext">
-                        <i><b><p>Pense à un tableau du musée, je vais tenter de le deviner</p></b></i>
-                        
+                        <p class = "p">Pense à un tableau du musée, je vais tenter de le deviner</p>
                     </div>
                 </div>
-
-        <div class="millieu">
-            <h2> 
-                <form action="jouer/" id="jouer" method="POST">
-                    {% csrf_token %}
-                   <!-- <input type="hidden" name="contain" value= {{contain}} />
-                    <input type="hidden" name="next_questions" value= {{next_questions}} />
-                   --><input type="hidden" name="reponse" value="Jeu" />
-                </form>
-                <a href="javascript:document.getElementById('jouer').submit();"> Jouer </a> </h2>
-                <!--<h2> <a class="bouton" href="{% url 'play_button' %}">Jouer</a> <br> <br> </h2>-->
+                <div class="millieu">
+                    <h2> <a class="bouton" href="{% url 'play_button' %}">Jouer</a> <br> <br> </h2>
+                </div>
+            </div>
         </div>
-
     </div>
-
     <div class="col-sm-2"> </div>
 </div>
 {% endblock %}
