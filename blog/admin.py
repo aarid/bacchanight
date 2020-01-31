@@ -29,7 +29,7 @@ def cleTag(obj):
     return obj.tag.cleTag
 cleTag.short_description = 'ID Tag'
 tag.short_description = 'Tag'
-tag.admin_order_field = 'cleTag'
+tag.admin_order_field = 'tag_id'
 
 def image(obj):
     return obj.image.titre
