@@ -1,26 +1,47 @@
 /*General CSS Setup*/
 body {
+    background: #D4D9DD url('images/bg03.jpg');
+    color: #474f51;
+    font-size: 13.5pt;
+    font-family: 'Yanone Kaffeesatz';
+    line-height: 1.85em;
+    font-weight: 300;
+}
+
+/*body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: white;
+    background-color: rgb(53, 156, 105);
     /*overflow-x:hidden; /* on empeche le defillement horizontall */
     /*overflow-y:hidden; /* on accepte le defillement vertical */ 
     
-    margin:0;
+    /*margin:0;
     padding:0;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
+    /*background-size: cover; /* version standardisée */
     /*background-image: url(../img_site/background1.jpg);*/
-    background-size: cover;
+    /*background-size: cover;
     background-repeat: no-repeat;
+}*/
+.logo{
+    color : white;
+    font-size: 35px;
 }
 
 .header{
-    color : white;
+    background: #353D40 url('images/bg02.jpg');
+	border-bottom: solid 1px #272e31;
+    font-size: 25px;
 }
 
 .footer{
-    background-color: rgb(17, 66, 50);
+    padding: 45px 0 45px 0;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    color: #546b76;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+        
+    /*background-color: rgb(17, 66, 50);
     color: white;
+    position: absolute; bottom: 0; left: 0; right: 0;*/
 }
 
 .bouton {
@@ -124,7 +145,8 @@ body {
 }
 
 .entete {
-    background-color: rgb(17, 66, 50);
+    /*background-color: rgb(17, 66, 50);*/
+    back
     color: white;
 }
 .personnage {
