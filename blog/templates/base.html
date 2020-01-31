@@ -18,12 +18,18 @@
         <link rel="stylesheet" href="{% static 'css/accueil.css'%}">
     </head>
 
-    <body>
-        <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light entete">
-                <!--<div class="col-sm-2"> </div>
-                <div class="container col-sm-8"> </div>
-                <div class="col-sm-2"> </div>-->
+  <!--    Nos propres code css    -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_equipe.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+</head>
+
+<body>
+  <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light entete">
+          <!--<div class="col-sm-2"> </div>
+          <div class="container col-sm-8"> </div>
+          <div class="col-sm-2"> </div>-->
                 <div class="navbar-header col-sm-8"> <a class="navbar-brand " href="{% url 'base' %}">Bacchanator</a> </div>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +40,7 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active"> <a class="nav-link" href="{% url 'base' %}">Accueil</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="{% url 'contacter' %}">Nous contacter</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="#qui">Qui sommes nous</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{% url 'qui_sommes_nous ' %}">Qui sommes nous</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
                     </ul>
                 </div>
