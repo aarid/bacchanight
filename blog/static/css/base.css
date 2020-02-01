@@ -8,11 +8,23 @@ body {
     font-weight: 300;
 }
 
-.footer{
+/* .footer1{
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
     color: #546b76;
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
-}
+    position: absolute;
+} */
+
+/* .footer {
+    padding: 0.8px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(27, 23, 23);
+    color: white;
+    text-align: center;
+ } */
 
 .bouton {
     color: black;
@@ -21,8 +33,8 @@ body {
 
 /* CSS talk bubble */
 .talk-bubble1 {
-    margin: 50px;
-    top: 120px;
+    margin: 30px;
+    top: 110px;
     display: inline-block;
     position: absolute;
     width: 180px;
@@ -99,6 +111,7 @@ body {
     padding-top: 220px;
     padding-left: 290px;
 }
+
 
 .reponse {
     position: absolute;

@@ -1,10 +1,10 @@
-body{
+.body1{
   margin: 50;
   padding: 0;
-  font-family: "montserrat";
+  top: 25px;
 }
 .team-section{
-  background: #f1f1f1;
+  background: #D4D9DD url('images/bg03.jpg');
   text-align: center;
 }
 .inner-width{ 
@@ -29,7 +29,7 @@ body{
   transition: 0.4s;
 }
 .pe:hover{
-  background: #ddd;
+  background: rgb(255, 255, 255);
 }
 .pe img{
   border-radius: 50%;
