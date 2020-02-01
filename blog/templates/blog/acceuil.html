@@ -7,33 +7,36 @@
 {% block corps %}
 <div class="container">
     <div class="col-sm-2"> </div>
+    
     <div class="col-sm-8">
         <div class="row">
-            <div class="col-sm-8">
-                <div class="col personnage d-inline d-sm-inline-block">
-                    <img src="{% static 'img_site/man_with_the_hand.png' %}" alt="Image narrateur" width="320"
-                        height="360" />
-                </div>
-            </div>
+            <div class="col-sm-2"> </div>
 
-            <div class="col-sm-4">
-                <div class="col talk-bubble tri-right round border btm-left">
+            <div class="col-sm-10">
+                <div class="talk-bubble1 tri-right round border btm-left fixed-top">
                     <div class="talktext">
-                        <p class = "p">Bonjour, je suis Bacchanator</p>
+                        <p class="p">Bonjour, je suis Bacchanator</p>
                     </div>
                 </div>
 
-                <div class="col talk-bubble tri-right round border left-top">
+                <div class="personnage d-inline d-sm-inline-block ">
+                    <img src="{% static 'img_site/man_with_the_hand.png' %}" class="rounded-circle" alt="Image narrateur"/>
+                </div>
+
+                <div class="talk-bubble2 tri-right round border left-top">
                     <div class="talktext">
                         <p class = "p">Pense à un tableau du musée, je vais tenter de le deviner</p>
                     </div>
                 </div>
+
                 <div class="millieu">
-                    <h2> <a class="bouton" href="{% url 'play_button' %}">Jouer</a> <br> <br> </h2>
+                    <h2> <a class="bouton" href="{% url 'play_button' %}">Jouer</a> </h2>
                 </div>
+
             </div>
-        </div>
+        </div>  
     </div>
+
     <div class="col-sm-2"> </div>
 </div>
 {% endblock %}

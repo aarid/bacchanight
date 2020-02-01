@@ -1,37 +1,49 @@
-{% extends 'base.html' %} {% load static %} {% block titre %}Jouer{% endblock %} {% block question %}
-<div class="container">
-    <div class="col-sm-2"> </div>
+{% extends 'base.html' %} 
 
-    <div class="col-sm-4">
-        <div class="col-sm-4 personnage d-inline d-sm-inline-block">
-            <img src="{% static 'img_site/man_with_the_hand.png' %}" alt="Image narrateur" width="320" height="360" />
-        </div>
-    </div>
+{% load static %} 
 
-    <div class="col-sm-4">
-        <div class="col d-sm-inline-block talk-bubble tri-right round border left-top">
-            <div class="talktext">
-                <p>{{ question.descriptionQuestion }} </p>
+{% block titre %}Jouer{% endblock %} 
+
+{% block question %}
+    <div class="container">
+        <div class="col-sm-2"> </div>
+
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-2"> </div>
+
+                <div class="col-sm-10">
+                    <div class="personnage d-inline d-sm-inline-block ">
+                        <img src="{% static 'img_site/man_with_the_hand.png' %}" class="rounded-circle" alt="Image narrateur" />
+                    </div>
+
+                    <div class="talk-bubble2 tri-right round border left-top">
+                        <div class="talktext"> 
+                            <p class="p">{{ question.descriptionQuestion }}</p> 
+                        </div>
+                    </div>
+
+                    {% block reponse %}
+                        <div class="reponse">
+                            <h2>
+                                {% for a in associee %}
+                                    <form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="tag" value="{{ a.tag }}" />
+                                        <input type="hidden" name="no_tag" value="{{ a.no_tag }}" />
+                                    </form>
+
+                                    <p> 
+                                        <a class="bouton" href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a>
+                                    </p>
+                                {% endfor %}
+                            </h2>
+                        </div>
+                    {% endblock %}
+                </div>
             </div>
         </div>
 
-        {% block reponse %}
-        <div class="millieu">
-            <h2>
-                {% for a in associee %}
-                <form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
-                    {% csrf_token %}
-                    <input type="hidden" name="tag" value="{{ a.tag }}" />
-                    <input type="hidden" name="no_tag" value="{{ a.no_tag }}" />
-                </form>
-
-                <p> <a class="bouton" href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a></p>
-                {% endfor %}
-            </h2>
-        </div>
-        {% endblock %}
+        <div class="col-sm-2"> </div>
     </div>
-
-    <div class="col-sm-2"> </div>
-</div>
 {% endblock %}
