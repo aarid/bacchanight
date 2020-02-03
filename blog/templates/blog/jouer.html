@@ -31,6 +31,7 @@
                                         {% csrf_token %}
                                         <input type="hidden" name="tag" value="{{ a.tag }}" />
                                         <input type="hidden" name="no_tag" value="{{ a.no_tag }}" />
+                                        <input type="hidden" name="question_asked" value="{{ question.cleQuestion }}" />
                                     </form>
 
                                     <p> 

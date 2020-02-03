@@ -42,6 +42,8 @@ def jouer(request):
             print(tag)
             no_tag = form.cleaned_data['no_tag']
             print(no_tag)
+
+            question_asked = form.cleaned_data['question_asked']
             
             tags = request.session['tags']
             no_tags = request.session['no_tags']
@@ -75,11 +77,19 @@ def jouer(request):
 
             print(contain)
             print(concerns)
-            if len(concerns.values_list())!=0:
-                clequestion =  concerns.values_list()[0][2]
-                question = Question.objects.all().filter( cleQuestion = clequestion)[0]
+            size_contain = contain.count()
+            size_concerns = concerns.count()
+
+            if size_contain ==1:
+                img = contain[0].image
+                return render(request, 'blog/afficher_image.html', {'img': img})
+
+            if size_concerns!=0: 
+                question = concerns[0].question
+                if question.cleQuestion == question_asked and size_concerns>1:
+                    question = concerns[1].question
                 print(question)
-                associee = Associer.objects.filter(question = clequestion)
+                associee = Associer.objects.filter(question = question.cleQuestion)
                 print(question.cleQuestion)
                 print(associee)
 
