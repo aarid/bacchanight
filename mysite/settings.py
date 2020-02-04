@@ -136,6 +136,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # myaccount.google.com/lesssecureapps 
+# myaccount.google.com/DisplayUnlockCaptcha 
+# myaccount.google.com/passwords
+# Email Settings 
 EMAIL_HOST = 'stmp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'bahousmane4567@gmail.com'
