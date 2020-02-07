@@ -8,58 +8,64 @@ body {
     font-weight: 300;
 }
 
-/*body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(53, 156, 105);
-    /*overflow-x:hidden; /* on empeche le defillement horizontall */
-    /*overflow-y:hidden; /* on accepte le defillement vertical */ 
-    
-    /*margin:0;
-    padding:0;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    /*background-size: cover; /* version standardisée */
-    /*background-image: url(../img_site/background1.jpg);*/
-    /*background-size: cover;
-    background-repeat: no-repeat;
-}*/
-.logo{
-    color : white;
-    font-size: 35px;
+.navbar-default .navbar-brand {
+    color:white
 }
 
-.header{
-    background: #353D40 url('images/bg02.jpg');
-	border-bottom: solid 1px #272e31;
-    font-size: 25px;
+/* Couleur utilisée lors du passage de la souris sur un titre de la barre */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+ color: #5E5E5E;
 }
 
-.footer{
-    padding: 45px 0 45px 0;
+/* .footer1{
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
     color: #546b76;
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
-        
-    /*background-color: rgb(17, 66, 50);
+    position: absolute;
+} */
+
+ footer {
+    /*padding: 0.8px;*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /*background-color: rgb(27, 23, 23);*/
     color: white;
-    position: absolute; bottom: 0; left: 0; right: 0;*/
+    text-align: center;
+ } 
+
+.champs{
+    margin-top: -90px;
 }
 
 .bouton {
     color: black;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 /* CSS talk bubble */
-.talk-bubble {
-    margin: 20px;
-    top: 150px;
+.talk-bubble1 {
+    margin: 30px;
+    top: 110px;
     display: inline-block;
-    position: relative;
-    width: 220px;
+    position: absolute;
+    width: 200px;
     height: auto;
     background-color: lightyellow;
 }
 
+.talk-bubble2 {
+    left: 500px;
+    margin: 20px;
+    top: 240px;
+    display: inline-block;
+    position: absolute;
+    width: 240px;
+    height: auto;
+    background-color: lightyellow;
+}
 .round {
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -92,7 +98,196 @@ body {
     border-color: transparent transparent lightyellow transparent;
 }
 
-/*******/
+/* talk bubble contents */
+.talktext {
+    padding: 1em;
+    text-align: center;
+    line-height: 1.8em;
+    font-size: x-large;
+}
+
+.talktext .p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+.entete {
+    color: white;
+}
+.personnage, .personnage1 {
+    position: relative;
+    top: 160px;
+    left: 160px;
+}
+
+.img {
+    width: 380px;
+    height: 480px;
+}
+
+.millieu {
+    position: absolute;
+    padding-top: 200px;
+    padding-left: 320px;
+}
+
+
+.reponse {
+    position: absolute;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 580px;
+}
+
+/* Pour les petits écrans */
+@media (min-width: 200px) and (max-width: 380px) {
+    .personnage {
+        position: relative;
+        top: 80px;
+        left: 30px;
+        
+    }
+    .img {
+        width: 250px;
+        height: 300px;
+    }
+
+    .millieu {
+        position: absolute;
+        padding-top: 100px;
+        padding-left: 120px;
+    }
+
+    .personnage1 {
+        position: relative;
+        top: 30px;
+        left: -10px;
+    }
+
+    .reponse {
+        position: absolute;
+        text-align: center;
+        padding-top: 40px;
+        padding-left: 100px;
+    }
+
+    .talk-bubble1 {
+        left: -40px;
+        margin: 30px;
+        top: 60px;
+        display: inline-block;
+        position: absolute;
+        width: 100px;
+        height: auto;
+        background-color: lightyellow;
+    }
+
+    .talk-bubble2 {
+        left: 220px;
+        margin: 20px;
+        top: 0px;
+        display: inline-block;
+        position: absolute;
+        width: 100px;
+        height: auto;
+        background-color: lightyellow;
+    }
+
+    .talktext {
+        padding: 1em;
+        text-align: center;
+        line-height: 1.8em;
+        font-size: small;
+    }
+
+    .tri-right.left-top:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: -24px;
+        right: auto;
+        top: auto;
+        bottom: 2px;
+        border: 28px solid;
+        border-color: transparent transparent lightyellow transparent;
+    }
+}
+
+/* Pour les écrans moyens */
+@media (min-width: 381px) and (max-width: 930px) {
+    .personnage {
+        position: relative;
+        top: 80px;
+        left: 50px;
+        
+    }
+
+    .img {
+        width: 280px;
+        height: 340px;
+    }
+
+    .millieu {
+        position: absolute;
+        padding-top: 100px;
+        padding-left: 160px;
+    }
+
+    .personnage1 {
+        position: relative;
+        top: 30px;
+        left: -30px;
+    }
+
+    .reponse {
+        position: absolute;
+        text-align: center;
+        padding-top: 40px;
+        padding-left: 100px;
+    }
+
+    .talk-bubble1 {
+        left: -40px;
+        margin: 30px;
+        top: 60px;
+        display: inline-block;
+        position: absolute;
+        width: 120px;
+        height: auto;
+        background-color: lightyellow;
+    }
+
+    .talk-bubble2 {
+        left: 260px;
+        margin: 20px;
+        top: 0px;
+        display: inline-block;
+        position: absolute;
+        width: 120px;
+        height: auto;
+        background-color: lightyellow;
+    }
+
+    .talktext {
+        padding: 1em;
+        text-align: center;
+        line-height: 1.8em;
+        font-size: medium;
+    }
+
+    .tri-right.left-top:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: -24px;
+        right: auto;
+        top: auto;
+        bottom: 2px;
+        border: 28px solid;
+        border-color: transparent transparent lightyellow transparent;
+    }
+}
 
 
 /* .lds-hourglass {
@@ -126,40 +321,3 @@ body {
       transform: rotate(1800deg);
     }
   } */
-  
-/********/
-
-/* talk bubble contents */
-
-.talktext {
-    padding: 1em;
-    text-align: center;
-    line-height: 1.8em;
-}
-
-.talktext .p {
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-}
-
-.entete {
-    /*background-color: rgb(17, 66, 50);*/
-    back
-    color: white;
-}
-.personnage {
-    position: relative;
-    top: 160px;
-    width: auto;
-}
-
-.millieu {
-    position: relative;
-    padding-top: 200px;
-    padding-left: 60px;
-}
-
-h3 a {
-    color: rgb(219, 191, 47);
-    font-size: 36px;
-}

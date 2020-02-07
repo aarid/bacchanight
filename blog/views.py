@@ -3,6 +3,8 @@ from .models import Question, Associer, Tag, Image, Contenir, Concerner
 from django.db.models import Count
 from .forms import AnswerForm
 from django.http import HttpResponseRedirect
+from django.core.mail import send_mail
+from .forms import ContacterNous
 #from django.core import serializers
 
 # Create your views here.
@@ -18,7 +20,25 @@ def accueil(request):
 
 # Méthode qui retourne la page Nous contacter
 def contacter(request):
-    return render(request, 'blog/contacter.html', {})
+    if request.method == 'POST':
+        form = ContacterNous(request.POST)
+
+        if form.is_valid():
+            nomPrenon  = form.cleaned_data['nomPrenon']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            mail_admin = ['bahousmane4567@gmail.com']
+
+            send_mail(nomPrenon, subject, message, mail_admin)
+
+            return render(request, 'blog/contacter.html', {'message' : message})
+            #return HttpResponseRedirect('/thanks/')
+
+    else:
+        form = ContacterNous()
+
+    return render(request, 'blog/contacter.html', {'form': form})
+
 
 # Méthode qui retourne la page faq
 def faq(request):
@@ -42,6 +62,8 @@ def jouer(request):
             print(tag)
             no_tag = form.cleaned_data['no_tag']
             print(no_tag)
+
+            question_asked = form.cleaned_data['question_asked']
             
             tags = request.session['tags']
             no_tags = request.session['no_tags']
@@ -75,11 +97,19 @@ def jouer(request):
 
             print(contain)
             print(concerns)
-            if len(concerns.values_list())!=0:
-                clequestion =  concerns.values_list()[0][2]
-                question = Question.objects.all().filter( cleQuestion = clequestion)[0]
+            size_contain = contain.count()
+            size_concerns = concerns.count()
+
+            if size_contain ==1:
+                img = contain[0].image
+                return render(request, 'blog/afficher_image.html', {'img': img})
+
+            if size_concerns!=0: 
+                question = concerns[0].question
+                if question.cleQuestion == question_asked and size_concerns>1:
+                    question = concerns[1].question
                 print(question)
-                associee = Associer.objects.filter(question = clequestion)
+                associee = Associer.objects.filter(question = question.cleQuestion)
                 print(question.cleQuestion)
                 print(associee)
 
