@@ -8,7 +8,15 @@ body {
     font-weight: 300;
 }
 
+.navbar-default .navbar-brand {
+    color:white
+}
 
+/* Couleur utilisée lors du passage de la souris sur un titre de la barre */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+ color: #5E5E5E;
+}
 
 /* .footer1{
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
@@ -17,16 +25,20 @@ body {
     position: absolute;
 } */
 
-/* .footer {
-    padding: 0.8px;
+ footer {
+    /*padding: 0.8px;*/
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(27, 23, 23);
+    /*background-color: rgb(27, 23, 23);*/
     color: white;
     text-align: center;
- } */
+ } 
+
+.champs{
+    margin-top: -90px;
+}
 
 .bouton {
     color: black;
