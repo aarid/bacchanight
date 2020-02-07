@@ -45,12 +45,12 @@ body {
 }
 
 .talk-bubble2 {
-    left: 500px;
+    left: 520px;
     margin: 20px;
-    top: 240px;
+    top: 260px;
     display: inline-block;
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: auto;
     background-color: lightyellow;
 }
