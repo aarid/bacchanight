@@ -133,3 +133,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# myaccount.google.com/lesssecureapps 
+# myaccount.google.com/DisplayUnlockCaptcha 
+# myaccount.google.com/passwords
+# Email Settings 
+EMAIL_HOST = 'stmp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'bahousmane4567@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = False
