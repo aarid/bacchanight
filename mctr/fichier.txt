@@ -86,7 +86,13 @@ img125 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/klofkh48eos3cc
 
 img126 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/z63fs43sq1ylc2vg05jev7otztl02xrxa95hhdg6vg81rcq52p?search=antoine%20barye
 
-img127 : 
+img127 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/uxj0no5610tydxhvs6rkoqrjmq73bal7gqxmnoe4wmw9n32cg8?search=sculpture
+
+img128 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/n4ml9nwvk6zrysfwdv05vulc0vlikt8zhmswv8jk9r9xmkomwo?search=sculpture
+
+img129: http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/s00m2f18maujxw1fadejbspkfoe6kp120vb00vocxonnos3mwk?search=Une%20Bacchante
+
+img130: 
 
 
 
