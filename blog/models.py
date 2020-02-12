@@ -50,11 +50,11 @@ class Image(models.Model):
     image = models.ImageField( null=True)
     auteur = models.CharField(max_length=100)
     date_creation = models.CharField(max_length=20)
-    designation = models.CharField(max_length=100)
+    titre = models.CharField(max_length=100)
     matiere_technique = models.CharField(max_length=100)
     domaine = models.CharField(max_length=50)
-    titre = models.CharField(max_length=200)
     sujet = models.TextField()
+    lien_musba = models.CharField(max_length=200)
     
 #     def afficher_image(self):
 #         # Pas totalement fini, 1ere étape...

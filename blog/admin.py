@@ -54,6 +54,7 @@ admin.site.register(Contenir, ContenirAdmin2)
 
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('titre', 'cleImage')
+    list_filter =  ('cleImage',)
 admin.site.register(Image, ImageAdmin)
 
 class AssocierAdmin2(admin.ModelAdmin):
