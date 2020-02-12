@@ -12,6 +12,9 @@ Il faut tout d'abord créer son propre environnement virtuel (qui doit écraser 
 Il faut aussi installer la bibliothèque Pillow avec :
     pip3 install Pillow (avec sudo pour ordi perso)
 
+Et cleanup pour supprimer les fichiers des objets supprimés : 
+    pip install django-cleanup
+
 Mot de passe page admin : azerty1234
 Mot de passe passe admin : azerty1234
 

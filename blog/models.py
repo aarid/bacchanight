@@ -47,7 +47,7 @@ class Associer(models.Model):
 class Image(models.Model):
     cleImage = models.IntegerField(primary_key = True)
     # FileFiel au lieu de image
-    image = models.ImageField(upload_to = 'media/', null=True)
+    image = models.ImageField( null=True)
     auteur = models.CharField(max_length=100)
     date_creation = models.CharField(max_length=20)
     designation = models.CharField(max_length=100)
