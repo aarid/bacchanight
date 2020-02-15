@@ -8,9 +8,7 @@ body {
     font-weight: 300;
 }
 
-.navbar-default .navbar-brand {
-    color:white
-}
+
 
 /* Couleur utilisée lors du passage de la souris sur un titre de la barre */
 .navbar-default .navbar-brand:hover,
@@ -25,20 +23,26 @@ body {
     position: absolute;
 } */
 
- footer {
+ /* footer { */
     /*padding: 0.8px;*/
-    position: fixed;
+    /* position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100%; */
     /*background-color: rgb(27, 23, 23);*/
-    color: white;
+    /* color: white;
     text-align: center;
- } 
+ }  */
 
+<<<<<<< HEAD
 .champs{
     /*margin-top: -90px;*/
 }
+=======
+/* .champs{
+    margin-top: -90px;
+} */
+>>>>>>> a8e29b301e15d217ba2f59af652b597fd3b54091
 
 .bouton {
     color: black;
@@ -57,12 +61,12 @@ body {
 }
 
 .talk-bubble2 {
-    left: 500px;
+    left: 520px;
     margin: 20px;
-    top: 240px;
+    top: 260px;
     display: inline-block;
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: auto;
     background-color: lightyellow;
 }
