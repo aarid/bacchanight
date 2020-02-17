@@ -46,7 +46,7 @@ body {
 
 .bouton {
     color: black;
-    font-size: 32px;
+    font-size: 40px;
 }
 
 /* CSS talk bubble */
@@ -119,18 +119,18 @@ body {
 }
 .personnage, .personnage1 {
     position: relative;
-    top: 160px;
+    top: 30px;
     left: 160px;
 }
 
 .img {
     width: 380px;
-    height: 480px;
+    height: 420px;
 }
 
 .millieu {
     position: absolute;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-left: 320px;
 }
 
@@ -146,25 +146,25 @@ body {
 @media (min-width: 200px) and (max-width: 380px) {
     .personnage {
         position: relative;
-        top: 80px;
+        top: 10px;
         left: 30px;
         
     }
     .img {
-        width: 250px;
-        height: 300px;
+        width: 240px;
+        height: 280px;
     }
 
     .millieu {
         position: absolute;
-        padding-top: 100px;
+        padding-top: 50px;
         padding-left: 120px;
     }
 
     .personnage1 {
         position: relative;
-        top: 30px;
-        left: -10px;
+        top: 10px;
+        left: -40px;
     }
 
     .reponse {
@@ -177,7 +177,7 @@ body {
     .talk-bubble1 {
         left: -40px;
         margin: 30px;
-        top: 60px;
+        top: 80px;
         display: inline-block;
         position: absolute;
         width: 100px;
@@ -188,12 +188,18 @@ body {
     .talk-bubble2 {
         left: 220px;
         margin: 20px;
-        top: 0px;
+        top: 20px;
         display: inline-block;
         position: absolute;
         width: 100px;
         height: auto;
         background-color: lightyellow;
+    }
+
+    #plus {
+        top: 100px;
+        left: 180px;
+        width: 130px;
     }
 
     .talktext {
