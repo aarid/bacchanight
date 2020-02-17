@@ -76,6 +76,7 @@ body {
     -moz-border-radius: 15px;
 }
 
+
 .tri-right.left-top:after {
     content: ' ';
     position: absolute;
@@ -87,6 +88,16 @@ body {
     bottom: auto;
     border: 28px solid;
     border-color: lightyellow transparent transparent transparent;
+}
+
+#plus {
+    top: 160px;
+}
+
+#plus:after {
+    top: auto;
+    bottom: 2px;
+    border-color: transparent transparent lightyellow transparent;
 }
 
 .tri-right.btm-left:after {
@@ -253,13 +264,13 @@ body {
         position: absolute;
         text-align: center;
         padding-top: 40px;
-        padding-left: 100px;
+        padding-left: 160px;
     }
 
     .talk-bubble1 {
         left: -40px;
         margin: 30px;
-        top: 60px;
+        top: 160px;
         display: inline-block;
         position: absolute;
         width: 120px;
@@ -268,14 +279,20 @@ body {
     }
 
     .talk-bubble2 {
-        left: 260px;
+        left: 280px;
         margin: 20px;
-        top: 0px;
+        top: 80px;
         display: inline-block;
         position: absolute;
         width: 120px;
         height: auto;
         background-color: lightyellow;
+    }
+
+    #plus {
+        top: 160px;
+        left: 220px;
+        width: 160px;
     }
 
     .talktext {
