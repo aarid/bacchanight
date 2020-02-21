@@ -29,7 +29,7 @@ DEBUG = True
 
 # python manage.py runserver '0.0.0.0:8000' pour le lancer et que ça soit accesible par une autre machine du cremi
 
-ALLOWED_HOSTS = ['127.0.0.1', '.emi.u-bordeaux.fr', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.emi.u-bordeaux.fr', '.pythonanywhere.com', 'https:127.0.0.1']
 
 
 # Application definition
@@ -135,6 +135,10 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#SECURE_SSL_REDIRECT = False
+#SESSION_COOKIE_SECURE = False
+#CSRF_COOKIE_SECURE = False
 
 # myaccount.google.com/lesssecureapps 
 # myaccount.google.com/DisplayUnlockCaptcha 
