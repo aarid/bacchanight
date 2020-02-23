@@ -8,12 +8,27 @@ body {
     font-weight: 300;
 }
 
-
-
 /* Couleur utilisée lors du passage de la souris sur un titre de la barre */
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
  color: #5E5E5E;
+}
+
+.feu {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0    0   2px #fefcc9,
+                 1px -1px 3px #feec85,
+                -2px -2px 4px #ffae34,
+                 2px -4px 5px #5691b8,
+                -2px -6px 6px #547fc0,
+                 0   -8px 7px #587abb,
+                 1px -9px 8px #451b0e;
+  }
+
+.text {
+    font-size: small;
 }
 
 /* .footer1{
@@ -34,19 +49,21 @@ body {
     text-align: center;
  }  */
 
-<<<<<<< HEAD
-.champs{
-    /*margin-top: -90px;*/
-}
-=======
-/* .champs{
+/*.champs{
     margin-top: -90px;
 } */
->>>>>>> a8e29b301e15d217ba2f59af652b597fd3b54091
 
-.bouton {
+.bouton.play {
     color: black;
     font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0    0   2px #fefcc9,
+                 1px -1px 3px #feec85,
+                -2px -2px 4px #ffae34,
+                 2px -4px 5px #c2920d,
+                -2px -6px 6px #547fc0,
+                 0   -8px 7px #587abb,
+                 1px -9px 8px #451b0e;
 }
 
 /* CSS talk bubble */
@@ -141,7 +158,7 @@ body {
 
 .millieu {
     position: absolute;
-    padding-top: 100px;
+    padding-top: 70px;
     padding-left: 320px;
 }
 
@@ -239,8 +256,7 @@ body {
     .personnage {
         position: relative;
         top: 80px;
-        left: 50px;
-        
+        left: 50px;  
     }
 
     .img {
