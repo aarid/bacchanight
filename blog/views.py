@@ -16,6 +16,7 @@ def post_list(request):
 def accueil(request):
     request.session['tags'] = ""
     request.session['no_tags'] = ""
+    request.session['questions_asked'] = ""
     return render(request, 'blog/acceuil.html')
 
 # Méthode qui retourne la page Nous contacter
@@ -59,14 +60,18 @@ def jouer(request):
         print(form)
         if form.is_valid():
             tag = form.cleaned_data['tag']
-            print(tag)
+            print( "tag = " + tag)
             no_tag = form.cleaned_data['no_tag']
             print(no_tag)
+
+            question_asked = form.cleaned_data['question_asked']
+            print("questions_asked = " + question_asked)
 
             question_asked = form.cleaned_data['question_asked']
             
             tags = request.session['tags']
             no_tags = request.session['no_tags']
+            questions_asked = request.session['questions_asked']
             cletag = 0
             if tag!="":
                 cletag =  Tag.objects.all().filter(tag = tag).values_list()[0][0]
@@ -75,8 +80,16 @@ def jouer(request):
                 cletag =  Tag.objects.all().filter(tag = no_tag).values_list()[0][0]
                 no_tags = no_tags + "," + str(cletag)
             print(cletag)
-            print(tags)
+            print("tags = " + tags)
             print(no_tags)
+            print(questions_asked)
+
+            if question_asked!="":
+                questions_asked = questions_asked + "," +  question_asked
+
+            request.session['tags'] = tags
+            request.session['no_tags'] = no_tags
+            request.session['questions_asked'] = questions_asked
 
             tags = tags.split(",")
             tags.remove('')
@@ -84,16 +97,25 @@ def jouer(request):
             no_tags = no_tags.split(",")
             no_tags.remove('')
 
+            questions_asked = questions_asked.split(",")
+            questions_asked.remove('')
+
             contain = Contenir.objects.all()
             concerns = Concerner.objects.all()
             
             for i in range(len(tags)):
                 contain = contain.filter(tag = int(tags[i]))
-                concerns = concerns.filter(tag = int(tags[i]))
+                #concerns = concerns.filter(tag = int(tags[i]))
 
             for i in range(len(no_tags)):
                 contain = contain.exclude(tag = int(no_tags[i]))
-                concerns = concerns.exclude(tag = int(no_tags[i]))
+                #concerns = concerns.exclude(tag = int(no_tags[i]))
+
+            print("Avant")
+            print(concerns)
+
+            for i in range(len(questions_asked)):
+                concerns = concerns.exclude(question__cleQuestion = int(questions_asked[i]))
 
             print(contain)
             print(concerns)

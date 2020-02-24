@@ -5,7 +5,7 @@ from .models import Contenir, Concerner
 class AnswerForm(forms.Form):
     tag = forms.CharField(max_length=200, required=False)
     no_tag = forms.CharField(max_length=200, required=False)
-    question_asked = forms.IntegerField()
+    question_asked = forms.CharField(max_length=100, required=False)
 
 class ContacterNous(forms.Form):
     nomPrenom = forms.CharField(max_length=100)
