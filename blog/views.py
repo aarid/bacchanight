@@ -102,24 +102,30 @@ def jouer(request):
 
             contain = Contenir.objects.all()
             concerns = Concerner.objects.all()
-            
+            print("Début for")
+            print(concerns)
             for i in range(len(tags)):
-                contain = contain.filter(tag = int(tags[i]))
-                #concerns = concerns.filter(tag = int(tags[i]))
+                print("------------------------------------------------------")
+                contain = contain.filter(image__tags = int(tags[i]))
+                concerns = concerns.filter(question__tags = int(tags[i]))
+                print(concerns)
+                
 
             for i in range(len(no_tags)):
                 contain = contain.exclude(tag = int(no_tags[i]))
                 #concerns = concerns.exclude(tag = int(no_tags[i]))
 
             print("Avant")
-            print(concerns)
+            
 
             for i in range(len(questions_asked)):
                 concerns = concerns.exclude(question__cleQuestion = int(questions_asked[i]))
 
             print(contain)
             print(concerns)
-            size_contain = contain.count()
+            size_contain = len(contain.values('image').annotate(dcount=Count('image')) )
+            print("******************************************")
+            print(size_contain)
             size_concerns = concerns.count()
 
             if size_contain ==1:

@@ -39,7 +39,7 @@ admin.site.register(Reponse, ReponseAdmin)
 
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('descriptionQuestion', 'cleQuestion')
-    list_filter =  (('reponses', admin.RelatedOnlyFieldListFilter),)
+    list_filter =  (('reponses', admin.RelatedOnlyFieldListFilter), ('tags', admin.RelatedOnlyFieldListFilter),)
     inlines = [AssocierTabularInline, ConcernerTabularInline]
 admin.site.register(Question, QuestionAdmin)
 
