@@ -4,10 +4,24 @@
 {% block titre %}Tableau trouvé!{% endblock %}
 
 {% block corps %}
-<br>
-<br>
-    <div class="container distance">
-        <img src="{{img.image.url}}" alt="Image narrateur" width="380" height="500" />
-       
+<div class="container">
+    <div class="col-sm-4">
+        <div class="descript_image">
+            <img src="{{img.image.url}}" alt="Image narrateur" class="d_image"/>
+        </div>
     </div>
+
+    <div class="col">
+        <div class="descript">
+            <p> <strong>Auteur :</strong>   {{img.auteur}} </p>
+            <p> <strong>Date de création :</strong>     {{img.date_creation}} </p>
+            <p> <strong>Titre :</strong>     {{img.titre}} </p>
+            <p> <strong>Matière et technique :</strong>     {{img.matiere_technique}} </p>
+            <p> <strong>Domaine :</strong>   {{img.domaine}} </p>
+            <p> <strong>Sujet :</strong>    {{img.sujet}} </p>
+        </div>
+    </div>
+</div>
+</div>
+
 {% endblock %}
