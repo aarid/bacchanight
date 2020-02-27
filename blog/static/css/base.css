@@ -28,7 +28,7 @@ body {
   }
 
 .text {
-    font-size: small;
+    font-size: smaller;
 }
 
 /* .footer1{
@@ -55,7 +55,7 @@ body {
 
 .bouton.play {
     color: black;
-    font-size: 40px;
+    font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
     text-shadow: 0    0   2px #fefcc9,
                  1px -1px 3px #feec85,
@@ -64,6 +64,11 @@ body {
                 -2px -6px 6px #547fc0,
                  0   -8px 7px #587abb,
                  1px -9px 8px #451b0e;
+    text-decoration: none;
+}
+
+.bouton.answer {
+    text-decoration: none;
 }
 
 /* CSS talk bubble */
@@ -134,7 +139,7 @@ body {
 .talktext {
     padding: 1em;
     text-align: center;
-    line-height: 1.8em;
+    line-height: 1.6em;
     font-size: x-large;
 }
 
@@ -159,11 +164,11 @@ body {
 .millieu {
     position: absolute;
     padding-top: 70px;
-    padding-left: 320px;
+    padding-left: 300px;
 }
 
-
 .reponse {
+    width: max-content;
     position: absolute;
     text-align: center;
     padding-top: 10px;
@@ -187,106 +192,10 @@ body {
     height: 320px;
 }
 
-/* Pour les petits écrans */
-@media (min-width: 200px) and (max-width: 380px) {
-    .personnage {
-        position: relative;
-        top: 10px;
-        left: 25px; 
-    }
-
-    .img {
-        width: 230px;
-        height: 270px;
-    }
-
-    .millieu {
-        position: absolute;
-        padding-top: 50px;
-        padding-left: 120px;
-    }
-
-    .personnage1 {
-        position: relative;
-        top: 10px;
-        left: -60px;
-    }
-
-    .reponse {
-        position: absolute;
-        text-align: center;
-        padding-top: 40px;
-        padding-left: 100px;
-    }
-
-    .talk-bubble1 {
-        left: -40px;
-        margin: 30px;
-        top: 80px;
-        display: inline-block;
-        position: absolute;
-        width: 100px;
-        height: auto;
-        background-color: lightyellow;
-    }
-
-    .talk-bubble2 {
-        left: 210px;
-        margin: 20px;
-        top: 20px;
-        display: inline-block;
-        position: absolute;
-        width: 100px;
-        height: auto;
-        background-color: lightyellow;
-    }
-
-    #plus {
-        top: 100px;
-        left: 140px;
-        width: 130px;
-    }
-
-    .talktext {
-        padding: 1em;
-        text-align: center;
-        line-height: 1.8em;
-        font-size: small;
-    }
-
-    .tri-right.left-top:after {
-        content: ' ';
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: -24px;
-        right: auto;
-        top: auto;
-        bottom: 2px;
-        border: 28px solid;
-        border-color: transparent transparent lightyellow transparent;
-    }
-
-    .descript {
-        padding-left: 0px;
-        top: 320px;
-    }
-    
-    .descript_image {
-        position: absolute;
-        top: 20px;
-    }
-
-    .d_image {
-        width: 280px;
-        height: 280px;
-    }
-}
 
 /* Pour les écrans moyens */
 @media (min-width: 381px) and (max-width: 930px) {
     .personnage {
-        position: relative;
         top: 80px;
         left: 50px;  
     }
@@ -297,20 +206,20 @@ body {
     }
 
     .millieu {
-        position: absolute;
         padding-top: 100px;
-        padding-left: 160px;
+        padding-left: 150px;
+    }
+
+    .bouton.play { 
+        font-size: 45px;
     }
 
     .personnage1 {
-        position: relative;
         top: 30px;
         left: -30px;
     }
 
     .reponse {
-        position: absolute;
-        text-align: center;
         padding-top: 40px;
         padding-left: 160px;
     }
@@ -319,22 +228,14 @@ body {
         left: -40px;
         margin: 30px;
         top: 160px;
-        display: inline-block;
-        position: absolute;
         width: 120px;
-        height: auto;
-        background-color: lightyellow;
     }
 
     .talk-bubble2 {
         left: 280px;
         margin: 20px;
         top: 80px;
-        display: inline-block;
-        position: absolute;
         width: 120px;
-        height: auto;
-        background-color: lightyellow;
     }
 
     #plus {
@@ -344,22 +245,12 @@ body {
     }
 
     .talktext {
-        padding: 1em;
-        text-align: center;
-        line-height: 1.8em;
         font-size: medium;
     }
 
     .tri-right.left-top:after {
-        content: ' ';
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: -24px;
-        right: auto;
         top: auto;
         bottom: 2px;
-        border: 28px solid;
         border-color: transparent transparent lightyellow transparent;
     }
 
@@ -369,7 +260,6 @@ body {
     }
     
     .descript_image {
-        position: absolute;
         top: 20px;
     }
 
@@ -378,6 +268,84 @@ body {
         height: 320px;
     }
 }
+
+
+/* Pour les petits écrans */
+@media (min-width: 200px) and (max-width: 380px) {
+    .personnage {
+        top: 10px;
+        left: 28px; 
+    }
+
+    .img {
+        width: 225px;
+        height: 265px;
+    }
+
+    .millieu {
+        padding-top: 40px;
+        padding-left: 110px;
+    }
+
+    .bouton.play { 
+        font-size: 30px;
+    }
+
+    .personnage1 {
+        top: 10px;
+        left: -60px;
+    }
+
+    .reponse {
+        padding-top: 40px;
+        padding-left: 100px;
+    }
+
+    .talk-bubble1 {
+        left: -40px;
+        margin: 30px;
+        top: 80px;
+        width: 100px;
+    }
+
+    .talk-bubble2 {
+        left: 205px;
+        margin: 20px;
+        top: 20px;
+        width: 100px;
+    }
+
+    #plus {
+        top: 100px;
+        left: 140px;
+        width: 130px;
+    }
+
+    .talktext {
+        font-size: small;
+    }
+
+    .tri-right.left-top:after {
+        top: auto;
+        bottom: 2px;
+        border-color: transparent transparent lightyellow transparent;
+    }
+
+    .descript {
+        padding-left: 0px;
+        top: 320px;
+    }
+    
+    .descript_image {
+        top: 20px;
+    }
+
+    .d_image {
+        width: 280px;
+        height: 280px;
+    }
+}
+
 
 
 /* .lds-hourglass {
