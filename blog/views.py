@@ -114,6 +114,7 @@ def jouer(request):
             for i in range(len(no_tags)):
                 contain = contain.exclude(image__tags = int(no_tags[i]))
                 concerns = concerns.exclude(tag = int(no_tags[i]))
+                concerns = concerns.exclude(question__inclu = int(no_tags[i]))
 
             print("Avant")
             
