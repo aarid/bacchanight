@@ -23,6 +23,7 @@ class Tag(models.Model):
 class Question(models.Model):
     cleQuestion = models.IntegerField(primary_key = True)
     descriptionQuestion = models.CharField(max_length=200)
+    inclu = models.IntegerField()
 
     reponses = models.ManyToManyField(Reponse, through='Associer')
     tags = models.ManyToManyField(Tag, through='Concerner')
