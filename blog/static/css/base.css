@@ -358,23 +358,23 @@ button.button:hover::after, button.button:focus::after {
         height: 320px;
     }
 }
+/************************ FIN ****************************/
 
-
-/* Pour les petits écrans */
+/************************ Pour les petits écrans ****************************/
 @media (min-width: 200px) and (max-width: 380px) {
     .personnage {
-        top: 30px;
-        left: 45px; 
+        top: 55px;
+        left: 70px; 
     }
 
     .img {
         width: 160px;
-        height: 220px;
+        height: 200px;
     }
 
     .millieu {
-        padding-top: 60px;
-        padding-left: 70px;
+        padding-top: 90px;
+        padding-left: 90px;
     }
 
     .button { 
@@ -412,17 +412,17 @@ button.button:hover::after, button.button:focus::after {
     }
 
     .talk-bubble1 {
-        left: -40px;
+        left: -30px;
         margin: 30px;
-        top: 80px;
+        top: 65px;
         width: 100px;
     }
 
     .talk-bubble2 {
-        left: 170px;
+        left: 205px;
         margin: 20px;
         top: 20px;
-        width: 100px;
+        width: 110px;
     }
 
     #plus {
@@ -454,7 +454,116 @@ button.button:hover::after, button.button:focus::after {
         width: 280px;
         height: 280px;
     }
+
+    /****************************** Pour les + petits écrans ****************************/
+    @media (min-width: 331px) and (max-width: 350px) {
+        .personnage {
+            top: 55px;
+            left: 60px; 
+        }
+    
+        .img {
+            width: 150px;
+            height: 200px;
+        }
+    
+        .millieu {
+            padding-top: 90px;
+            padding-left: 80px;
+        }
+
+        .talk-bubble1 {
+            left: -35px;
+            margin: 30px;
+            top: 65px;
+            width: 100px;
+        }
+    
+        .talk-bubble2 {
+            left: 190px;
+            margin: 20px;
+            top: 20px;
+            width: 110px;
+        }
+    
+        .talktext {
+            font-size: small;
+        }
+    } /***************************** FIN ***********************/
+
+    /************************ Pour les ++ petits écrans ***************************/
+    @media (min-width: 301px) and (max-width: 330px) {
+        .personnage {
+            top: 55px;
+            left: 55px; 
+        }
+    
+        .img {
+            width: 140px;
+            height: 200px;
+        }
+    
+        .millieu {
+            padding-top: 90px;
+            padding-left: 70px;
+        }
+
+        .talk-bubble1 {
+            left: -35px;
+            margin: 30px;
+            top: 65px;
+            width: 100px;
+        }
+    
+        .talk-bubble2 {
+            left: 165px;
+            margin: 20px;
+            top: 20px;
+            width: 100px;
+        }
+    
+        .talktext {
+            font-size: small;
+        }
+    }/***************************** FIN ***********************/
+
+    /****************************** Pour les +++ petits écrans *****************************/
+    @media (min-width: 200px) and (max-width: 300px) {
+        .personnage {
+            top: 50px;
+            left: 55px; 
+        }
+    
+        .img {
+            width: 130px;
+            height: 190px;
+        }
+    
+        .millieu {
+            padding-top: 80px;
+            padding-left: 65px;
+        }
+
+        .talk-bubble1 {
+            left: -40px;
+            margin: 30px;
+            top: 70px;
+            width: 95px;
+        }
+    
+        .talk-bubble2 {
+            left: 160px;
+            margin: 20px;
+            top: 50px;
+            width: 95px;
+        }
+
+        .talktext {
+            font-size: x-small;
+        }
+    } /********************** FIN **************************/
 }
+/***************************** FIN ***************************/
 
 
 
