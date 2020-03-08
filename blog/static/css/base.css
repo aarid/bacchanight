@@ -28,7 +28,7 @@ body {
   }
 
 .text {
-    font-size: smaller;
+    font-size: medium;
 }
 
 /* .footer1{
@@ -55,6 +55,7 @@ body {
 
 .bouton.answer {
     text-decoration: none;
+    color: #000000;
 }
 
 /******************* CSS talk bubble ***************************/
@@ -99,7 +100,8 @@ body {
 }
 
 #plus {
-    top: 160px;
+    top: 50px;
+    left: 420px;
 }
 
 #plus:after {
@@ -126,7 +128,7 @@ body {
     padding: 1em;
     text-align: center;
     line-height: 1.6em;
-    font-size: x-large;
+    font-size: large;
 }
 
 .talktext .p {
@@ -136,10 +138,17 @@ body {
 .entete {
     color: white;
 }
-.personnage, .personnage1 {
+
+.personnage {
     position: relative;
     top: 30px;
     left: 160px;
+}
+
+.personnage1 {
+    position: relative;
+    top: 30px;
+    left: 40px;
 }
 
 .img {
@@ -149,11 +158,17 @@ body {
 /**************** FIN **************************/
 
 .reponse {
-    width: max-content;
+    width: fit-content;
     position: absolute;
     text-align: center;
-    padding-top: 10px;
-    padding-left: 580px;
+    top: 220px;
+    padding-left: 390px;
+}
+
+hr {
+    width:340px;  
+    height:2px; 
+    background-color: lightyellow;
 }
 
 .descript {
@@ -278,12 +293,16 @@ button.button:hover::after, button.button:focus::after {
     .millieu {
         padding-top: 150px;
         padding-left: 120px;
-        font-size: 30px;
+    }
+
+    .bouton.answer { 
+        font-size: smaller;
     }
 
     .button { 
         min-width: 170px;
         min-height: 60px;
+        font-size: 30px;
     }
 
     button.button::before {
@@ -306,12 +325,17 @@ button.button:hover::after, button.button:focus::after {
 
     .personnage1 {
         top: 30px;
-        left: -30px;
+        left: -70px;
     }
 
     .reponse {
-        padding-top: 40px;
-        padding-left: 160px;
+        top: 180px;
+        padding-left: 180px;
+    }
+
+    hr {
+        width:220px;  
+        height:2px; 
     }
 
     .talk-bubble1 {
@@ -329,13 +353,13 @@ button.button:hover::after, button.button:focus::after {
     }
 
     #plus {
-        top: 140px;
-        left: 220px;
-        width: 160px;
+        top: 20px;
+        left: 200px;
+        width: 180px;
     }
 
     .talktext {
-        font-size: medium;
+        font-size: smaller;
     }
 
     .tri-right.left-top:after {
@@ -361,7 +385,7 @@ button.button:hover::after, button.button:focus::after {
 /************************ FIN ****************************/
 
 /************************ Pour les petits écrans ****************************/
-@media (min-width: 200px) and (max-width: 380px) {
+@media (min-width: 200px) and (max-width: 440px) {
     .personnage {
         top: 55px;
         left: 70px; 
@@ -377,10 +401,14 @@ button.button:hover::after, button.button:focus::after {
         padding-left: 90px;
     }
 
+    .bouton.answer { 
+        font-size: small;
+    }
+
     .button { 
         min-width: 120px;
         min-height: 50px;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     button.button::before {
@@ -402,13 +430,18 @@ button.button:hover::after, button.button:focus::after {
     }
 
     .personnage1 {
-        top: 10px;
-        left: -60px;
+        top: 60px;
+        left: -50px;
     }
 
     .reponse {
-        padding-top: 40px;
+        top: 140px;
         padding-left: 100px;
+    }
+
+    hr {
+        width:220px;  
+        height:2px; 
     }
 
     .talk-bubble1 {
@@ -426,9 +459,9 @@ button.button:hover::after, button.button:focus::after {
     }
 
     #plus {
-        top: 100px;
-        left: 140px;
-        width: 130px;
+        top: 10px;
+        left: 120px;
+        width: 180px;
     }
 
     .talktext {
@@ -485,6 +518,22 @@ button.button:hover::after, button.button:focus::after {
             top: 20px;
             width: 110px;
         }
+
+        .personnage1 {
+            top: 60px;
+            left: -40px;
+        }
+
+        #plus {
+            top: 10px;
+            left: 110px;
+            width: 180px;
+        }
+
+        hr {
+            width:200px;  
+            height:2px; 
+        }
     
         .talktext {
             font-size: small;
@@ -499,8 +548,8 @@ button.button:hover::after, button.button:focus::after {
         }
     
         .img {
-            width: 140px;
-            height: 200px;
+            width: 130px;
+            height: 180px;
         }
     
         .millieu {
@@ -508,18 +557,43 @@ button.button:hover::after, button.button:focus::after {
             padding-left: 70px;
         }
 
+        .button {
+            font-size: 20px;
+        }
+
         .talk-bubble1 {
-            left: -35px;
+            left: -40px;
             margin: 30px;
-            top: 65px;
+            top: 50px;
             width: 100px;
         }
     
         .talk-bubble2 {
             left: 165px;
             margin: 20px;
-            top: 20px;
+            top: 5px;
             width: 100px;
+        }
+
+        #plus {
+            top: 10px;
+            left: 95px;
+            width: 170px;
+        }
+
+        .personnage1 {
+            top: 60px;
+            left: -45px;
+        }
+
+        .reponse {
+            top: 140px;
+            padding-left: 70px;
+        }
+
+        hr {
+            width:200px;  
+            height:2px; 
         }
     
         .talktext {
@@ -535,13 +609,17 @@ button.button:hover::after, button.button:focus::after {
         }
     
         .img {
-            width: 130px;
-            height: 190px;
+            width: 120px;
+            height: 180px;
         }
     
         .millieu {
             padding-top: 80px;
             padding-left: 65px;
+        }
+
+        .button {
+            font-size: 18px;
         }
 
         .talk-bubble1 {
@@ -552,10 +630,31 @@ button.button:hover::after, button.button:focus::after {
         }
     
         .talk-bubble2 {
-            left: 160px;
+            left: 150px;
             margin: 20px;
             top: 50px;
             width: 95px;
+        }
+
+        #plus {
+            top: 10px;
+            left: 75px;
+            width: 160px;
+        }
+
+        .personnage1 {
+            top: 60px;
+            left: -45px;
+        }
+
+        .reponse {
+            top: 120px;
+            padding-left: 60px;
+        }
+
+        hr {
+            width:180px;  
+            height:2px; 
         }
 
         .talktext {

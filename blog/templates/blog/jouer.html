@@ -19,7 +19,7 @@
 
                 {% block reponse %}
                 <div class="reponse">
-                    <h2>
+                    <h6>
                         {% for a in associee %}
                         <form action="/jouer/" id="{{ a.reponse.cleReponse }}" method="POST">
                             {% csrf_token %}
@@ -29,10 +29,12 @@
                         </form>
 
                         <p>
+                            <hr noshade>
                             <a class="bouton answer" href="javascript:document.getElementById('{{ a.reponse.cleReponse }}').submit();">{{ a.reponse.descriptionReponse }} </a>
+                            <hr noshade>
                         </p>
                         {% endfor %}
-                    </h2>
+                    </h6>
                 </div>
                 {% endblock %}
             </div>
