@@ -1,6 +1,10 @@
 from django.contrib import admin
 from .models import Reponse, Question, Associer, Image, Tag, Contenir, Concerner
 
+def image(obj):
+    return obj.image.image
+image.short_description = 'Image'
+image.admin_order_field = 'image__cleImage'
 
 class ConcernerAdmin(admin.ModelAdmin):
     list_display = ('question', 'tag')
@@ -9,7 +13,7 @@ class ConcernerAdmin(admin.ModelAdmin):
 admin.site.register(Concerner, ConcernerAdmin)
 
 class ContenirAdmin(admin.ModelAdmin):
-    list_display = ('image', 'tag')
+    list_display = (image, 'tag')
     list_filter = ('image', 'tag')
 admin.site.register(Contenir, ContenirAdmin)
 
