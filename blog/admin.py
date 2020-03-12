@@ -28,7 +28,7 @@ class AssocierTabularInline(admin.TabularInline):
 
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('titre', 'cleImage')
-    list_filter =  ('domaine', 'tags')
+    list_filter =  ( 'tags',)
     inlines = [ContenirTabularInline,]
 admin.site.register(Image, ImageAdmin)
 
