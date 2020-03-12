@@ -77,8 +77,9 @@ def jouer(request):
                 cletag =  Tag.objects.all().filter(tag = tag).values_list()[0][0]
                 tags = tags + "," + str(cletag)
             else:
-                cletag =  Tag.objects.all().filter(tag = no_tag).values_list()[0][0]
-                no_tags = no_tags + "," + str(cletag)
+                if no_tag!="":
+                    cletag =  Tag.objects.all().filter(tag = no_tag).values_list()[0][0]
+                    no_tags = no_tags + "," + str(cletag)
             print(cletag)
             print("tags = " + tags)
             print(no_tags)

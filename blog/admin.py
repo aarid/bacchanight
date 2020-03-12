@@ -7,7 +7,7 @@ image.short_description = 'Image'
 image.admin_order_field = 'image__cleImage'
 
 class ConcernerAdmin(admin.ModelAdmin):
-    list_display = ('question', 'tag')
+    list_display = ('question', 'tag', 'id')
     list_filter = ('question', 'tag')
 
 admin.site.register(Concerner, ConcernerAdmin)
