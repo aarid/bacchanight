@@ -24,6 +24,7 @@ class Question(models.Model):
     cleQuestion = models.IntegerField(primary_key = True)
     descriptionQuestion = models.CharField(max_length=200)
     inclu = models.IntegerField()
+    priority = models.IntegerField(default=0)
 
     reponses = models.ManyToManyField(Reponse, through='Associer')
     tags = models.ManyToManyField(Tag, through='Concerner')

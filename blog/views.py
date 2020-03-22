@@ -103,7 +103,8 @@ def jouer(request):
 
             contain = Contenir.objects.all()
             concerns = Concerner.objects.all()
-            concerns = concerns.values('question').annotate(count = Count('question')).order_by('count')
+            #concerns = concerns.values('question').annotate(count = Count('question')).order_by('count')
+            concerns = concerns.order_by('question__priority')
             print("Début for")
             print(concerns)
             for i in range(len(tags)):
@@ -136,12 +137,11 @@ def jouer(request):
                 return render(request, 'blog/afficher_image.html', {'img': img})
 
             if size_concerns!=0: 
-                question = concerns[0]['question']
+                question = concerns[0].question
                 if question == question_asked and size_concerns>1:
-                    question = concerns[1]['question']
-                question = Question.objects.get(cleQuestion=question)
+                    question = concerns[1].question
                 print(question)
-                associee = Associer.objects.filter(question = question)
+                associee = Associer.objects.filter(question = question.cleQuestion)
                 print(associee)
 
     else:
