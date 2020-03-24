@@ -49,6 +49,15 @@ def faq(request):
 def qui_sommes_nous(request):
     return render(request, 'blog/qui_sommes_nous.html', {})
 
+def clean (request):
+    request.session['tags'] = ""
+    request.session['no_tags'] = ""
+    request.session['questions_asked'] = ""
+
+def replay(request):
+    clean(request)
+    return render(request, 'blog/acceuil.html')
+
 # Méthode qui retourne la page jouer
 def jouer(request):
     question = None
