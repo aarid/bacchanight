@@ -31,33 +31,6 @@ body {
     font-size: medium;
 }
 
-/* .footer1{
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
-    color: #546b76;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
-    position: absolute;
-} */
-
- /* footer { */
-    /*padding: 0.8px;*/
-    /* position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%; */
-    /*background-color: rgb(27, 23, 23);*/
-    /* color: white;
-    text-align: center;
- }  */
-
-/*.champs{
-    margin-top: -90px;
-} */
-
-.bouton.answer {
-    text-decoration: none;
-    color: #000000;
-}
-
 /******************* CSS talk bubble ***************************/
 .talk-bubble1 {
     margin: 30px;
@@ -157,6 +130,12 @@ body {
 }
 /**************** FIN **************************/
 
+/***************** Pour la reponse ***********************/
+.bouton.answer {
+    text-decoration: none;
+    color: #000000;
+}
+
 .reponse {
     width: fit-content;
     position: absolute;
@@ -170,6 +149,7 @@ hr {
     height:2px; 
     background-color: lightyellow;
 }
+/***************** FIN ***********************************/
 
 .descript {
     position: absolute;
@@ -188,6 +168,7 @@ hr {
     height: 320px;
 }
 
+/******************************** Pour le bouton jouer *********************/
 .millieu {
     position: absolute;
     padding-top: 90px;
@@ -199,7 +180,7 @@ hr {
 }
 
 .button {
-    min-width: 200px;
+    min-width: 160px;
     min-height: 60px;
     text-transform: uppercase;
     color: #000000;
@@ -225,7 +206,7 @@ hr {
 button.button::before {
     content: '';
     border-radius: 1000px;
-    min-width: calc(200px + 12px);
+    min-width: calc(160px + 12px);
     min-height: calc(60px + 12px);
     border: 6px solid rgb(93, 105, 103); /*curseur sur le bouton*/
     box-shadow: 0 0 60px rgba(255, 255, 255, 0.64);
@@ -237,16 +218,16 @@ button.button::before {
     transition: all .3s ease-in-out 0s;
 }
 
-.button:hover, .button:focus {
+.button:hover, .button:focus, .button1:hover, .button1:focus {
     color: #313133;
     transform: translateY(-6px);
 }
 
-button.button:hover::before, button.button:focus::before {
+button.button:hover::before, button.button:focus::before, .button1:hover::before, .button1:focus::before {
     opacity: 1;
 }
 
-button.button::after {
+button.button::after, .button1::after {
     content: '';
     width: 30px; height: 30px;
     border-radius: 100%;
@@ -259,26 +240,52 @@ button.button::after {
     animation: ring 1.5s infinite;
 }
 
-button.button:hover::after, button.button:focus::after {
+button.button:hover::after, button.button:focus::after, .button1:hover::after, .button1:focus::after{
     animation: none;
     display: none;
 }
 
+/********************** Pour le bouton rejouer ************************/
+.replay {
+    position: absolute;
+    padding-top: 460px;
+    padding-left: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.button1 {
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0    0   2px #fefcc9,
+                1px -1px 3px #feec85,
+                -2px -2px 4px #ffae34,
+                2px -4px 5px #c2920d,
+                -2px -6px 6px #547fc0,
+                0   -8px 7px #587abb,
+                1px -9px 8px #451b0e;
+}
+/*********************** FIN ********************************/
+
 @keyframes ring {
     0% {
-        width: 30px;
-        height: 30px;
+        width: 10px;
+        height: 10px;
         opacity: 1;
     }
     100% {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
         opacity: 0;
     }
 }
+/******************* FIN du bouton jouer et rejouer *********************/
 
-
-/******************** Pour les écrans moyens ***************************/
+/******************** POUR LES ECRANS MOYENS ***************************/
 @media (min-width: 381px) and (max-width: 930px) {
     .personnage {
         top: 80px;
@@ -384,7 +391,7 @@ button.button:hover::after, button.button:focus::after {
 }
 /************************ FIN ****************************/
 
-/************************ Pour les petits écrans ****************************/
+/************************ POUR LES PETITS ÉCRANS ****************************/
 @media (min-width: 200px) and (max-width: 440px) {
     .personnage {
         top: 55px;
@@ -488,7 +495,7 @@ button.button:hover::after, button.button:focus::after {
         height: 280px;
     }
 
-    /****************************** Pour les + petits écrans ****************************/
+    /****************************** POUR LES + PETITS ÉCRANS ****************************/
     @media (min-width: 331px) and (max-width: 350px) {
         .personnage {
             top: 55px;
@@ -538,9 +545,9 @@ button.button:hover::after, button.button:focus::after {
         .talktext {
             font-size: small;
         }
-    } /***************************** FIN ***********************/
+    } /***************************** FIN *****************************************/
 
-    /************************ Pour les ++ petits écrans ***************************/
+    /************************ POUR LES ++ PETITS ÉCRANS ***************************/
     @media (min-width: 301px) and (max-width: 330px) {
         .personnage {
             top: 55px;
@@ -599,9 +606,9 @@ button.button:hover::after, button.button:focus::after {
         .talktext {
             font-size: small;
         }
-    }/***************************** FIN ***********************/
+    }/***************************** FIN **************************************************/
 
-    /****************************** Pour les +++ petits écrans *****************************/
+    /****************************** POUR LES +++ PETITS ÉCRANS *****************************/
     @media (min-width: 200px) and (max-width: 300px) {
         .personnage {
             top: 50px;
@@ -660,10 +667,32 @@ button.button:hover::after, button.button:focus::after {
         .talktext {
             font-size: x-small;
         }
-    } /********************** FIN **************************/
+    } /********************** FIN ********************************************/
 }
 /***************************** FIN ***************************/
 
+
+/* .footer1{
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    color: #546b76;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+    position: absolute;
+} */
+
+ /* footer { */
+    /*padding: 0.8px;*/
+    /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; */
+    /*background-color: rgb(27, 23, 23);*/
+    /* color: white;
+    text-align: center;
+ }  */
+
+/*.champs{
+    margin-top: -90px;
+} */
 
 
 /* .lds-hourglass {
