@@ -56,7 +56,7 @@ def clean (request):
 
 def replay(request):
     clean(request)
-    return render(request, 'blog/acceuil.html')
+    return jouer(request)
 
 # Méthode qui retourne la page jouer
 def jouer(request):

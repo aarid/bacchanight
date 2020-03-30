@@ -1,29 +1,24 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block titre %}Tableau trouvé!{% endblock %}
-
-{% block corps %}
+{% extends 'base.html' %} {% load static %} {% block titre %}Tableau trouvé!{% endblock %} {% block corps %}
 <div class="container">
     <div class="col-sm-4">
         <div class="descript_image">
-            <img src="{{img.image.url}}" alt="Image narrateur" class="d_image"/>
+            <img src="{{img.image.url}}" alt="Image narrateur" class="d_image" />
         </div>
     </div>
 
     <div class="col">
         <div class="descript">
-            <p> <strong>Auteur :</strong>   {{img.auteur}} </p>
-            <p> <strong>Date de création :</strong>     {{img.date_creation}} </p>
-            <p> <strong>Titre :</strong>     {{img.titre}} </p>
-            <p> <strong>Matière et technique :</strong>     {{img.matiere_technique}} </p>
-            <p> <strong>Domaine :</strong>   {{img.domaine}} </p>
-            <p> <strong>Sujet :</strong>    {{img.sujet}} </p>
+            <p> <strong>Auteur :</strong> {{img.auteur}} </p>
+            <p> <strong>Date de création :</strong> {{img.date_creation}} </p>
+            <p> <strong>Titre :</strong> {{img.titre}} </p>
+            <p> <strong>Matière et technique :</strong> {{img.matiere_technique}} </p>
+            <p> <strong>Domaine :</strong> {{img.domaine}} </p>
+            <p> <strong>Sujet :</strong> {{img.sujet}} </p>
         </div>
     </div>
 
     <div class="replay">
-        <h2> <a class="button1" href="{% url 'play_button' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>    
+        <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
     </div>
 </div>
 </div>
