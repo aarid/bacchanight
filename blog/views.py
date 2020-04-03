@@ -130,7 +130,7 @@ def jouer(request):
 
             print("Avant")
             
-
+ 
             for i in range(len(questions_asked)):
                 concerns = concerns.exclude(question__cleQuestion = int(questions_asked[i]))
 
