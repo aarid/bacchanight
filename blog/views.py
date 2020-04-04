@@ -49,6 +49,10 @@ def faq(request):
 def qui_sommes_nous(request):
     return render(request, 'blog/qui_sommes_nous.html', {})
 
+# Méthode qui retourne la page faq
+def not_found(request):
+    return render(request, 'blog/not_found.html', {})
+
 def clean (request):
     request.session['tags'] = ""
     request.session['no_tags'] = ""
