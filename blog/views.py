@@ -25,20 +25,24 @@ def contacter(request):
         form = ContacterNous(request.POST)
 
         if form.is_valid():
-            nomPrenon  = form.cleaned_data['nomPrenon']
-            subject = form.cleaned_data['subject']
+            nomPrenom  = form.cleaned_data['nomPrenom']
+            admail = form.cleaned_data['admail']
             message = form.cleaned_data['message']
-            mail_admin = ['bahousmane4567@gmail.com']
+            mail_admin = ['ousmane2014bah@gmail.com']
 
-            send_mail(nomPrenon, subject, message, mail_admin)
+            send_mail(nomPrenom, admail, message, mail_admin)
 
-            return render(request, 'blog/contacter.html', {'message' : message})
-            #return HttpResponseRedirect('/thanks/')
+            #return render(request, 'blog/contacter.html', {'message': message})
+            return HttpResponseRedirect('/thanks/')
 
     else:
         form = ContacterNous()
 
     return render(request, 'blog/contacter.html', {'form': form})
+
+#Envoie de message (teste)
+def thanks(request):
+    return render(request, 'blog/thanks.html', {})
 
 
 # Méthode qui retourne la page faq

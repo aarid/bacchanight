@@ -15,27 +15,27 @@
         <form action="{% url 'contacter' %}" method="post">
 
         {% csrf_token %}
-        <div class="row">
+        <!-- <div class="row">       
             <div class="col-lg-6">
-            <label for="nomPrenon">Nom & Prenom: </label>
-            <input type="text" name="nomPrenon" class="form-control mb-30" placeholder="Entrez votre nom et prénom" required><br>
+            <label for="nomPrenom">Nom & Prenom: </label>
+            <input type="text" name="nomPrenom" class="form-control mb-30" placeholder="Entrez votre nom et prénom" required><br>
         </div>
         <div class="col-lg-6">
-            <label for="subjet">Votre adresse email: </label>
-            <input type="email" name="subjet" class="form-control mb-30" placeholder="votre.adresse@email.com" maxlength="100" required><br>
+            <label for="admail">Votre adresse email: </label>
+            <input type="email" name="admail" class="form-control mb-30" placeholder="votre.adresse@email.com" maxlength="100" required><br>
         </div>
         <div class="col-12">
             <label for="message">Votre Message :</label>
             <textarea name="message" class="form-control mb-30" placeholder="Votre message ici" ></textarea>
-        </div>
+        </div> -->
             
-
+        {{ form }}
             
         <div class="col-12">
             <center><br/>
                 
             <!-- <button type="submit" class="btn dento-btn">Envoyer</button> -->
-            <input type="submit" value="Envoyer">
+            <input type="submit" value="submit">
         </center>
         </div>
     </div>

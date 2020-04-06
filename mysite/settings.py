@@ -149,15 +149,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # EMAIL_HOST_USER = 'bahousmane4567@gmail.com'
 # EMAIL_HOST_PASSWORD = ''
 # EMAIL_USE_TLS = True
-#EMAIL_USE_SSL = False
+# EMAIL_USE_SSL = False
 
 
 #////////////////////////////////
 
-EMAIL_BACKEND = 'project.mail.CustomEmailBackend'
-DEBUG_EMAIL = 'bahousmane4567@gmail.com'
+#EMAIL_BACKEND = 'project.mail.CustomEmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#DEBUG_EMAIL = 'ousmane2014bah@gmail.com'
 EMAIL_HOST = 'stmp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'EMAIL_HOST_USER'
-EMAIL_HOST_PASSWORD = 'EMAIL_HOST_PASSWORD'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'ousmane2014bah@gmail.com'
+EMAIL_HOST_PASSWORD = '24871603Obah'
 EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
