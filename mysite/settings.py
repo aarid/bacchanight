@@ -139,7 +139,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #SECURE_SSL_REDIRECT = False
 #SESSION_COOKIE_SECURE = False
 #CSRF_COOKIE_SECURE = False
-
+ 
 # myaccount.google.com/lesssecureapps 
 # myaccount.google.com/DisplayUnlockCaptcha 
 # myaccount.google.com/passwords

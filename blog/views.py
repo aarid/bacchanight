@@ -44,7 +44,6 @@ def contacter(request):
 def thanks(request):
     return render(request, 'blog/thanks.html', {})
 
-
 # Méthode qui retourne la page faq
 def faq(request):
     return render(request, 'blog/faq.html', {})
