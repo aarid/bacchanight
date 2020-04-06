@@ -8,18 +8,19 @@
 
     <div class="col">
         <div class="descript">
-            <p> <u><strong>Auteur :</strong></u> <FONT face="Times New Roman" size="5"> {{img.auteur}} </FONT> </p>
-            <p> <u><strong>Date de création :</strong></u> <FONT face="Times New Roman" size="5"> {{img.date_creation}} </FONT> </p>
-            <p> <u><strong>Titre :</strong></u> <FONT face="Times New Roman" size="5"> {{img.titre}} </FONT> </p>
-            <p> <u><strong>Matière et technique :</strong></u> <FONT face="Times New Roman" size="5"> {{img.matiere_technique}} </FONT> </p>
-            <p> <u><strong>Domaine :</strong></u> <FONT face="Times New Roman" size="5"> {{img.domaine}} </FONT></p>
-            <p> <u><strong>Sujet :</strong></u>  <FONT face="Times New Roman" size="5"> {{img.sujet}} </FONT>    </p>
+            <p> <u><strong>Auteur :</strong></u> {{img.auteur}} </p>
+            <p> <u><strong>Date de création :</strong></u> {{img.date_creation}} </p>
+            <p> <u><strong>Titre :</strong></u> {{img.titre}} </p>
+            <p> <u><strong>Matière et technique :</strong></u> {{img.matiere_technique}} </p>
+            <p> <u><strong>Domaine :</strong></u> {{img.domaine}} </p>
+            <p> <u><strong>Sujet :</strong></u> {{img.sujet}} </p>
+            <div class="replay">
+                <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
+            </div>
         </div>
     </div>
 
-    <div class="replay">
-        <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
-    </div>
+    
 </div>
 </div>
 
