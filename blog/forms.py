@@ -11,5 +11,5 @@ class ContacterNous(forms.Form):
     nomPrenom = forms.CharField(max_length=100)
     admail = forms.EmailField(max_length=100)
     message = forms.CharField(widget=forms.Textarea)
-    #sender  = forms.CharField()
-    #cc_myself = forms.BooleanField(required=False)
+    sender  = forms.CharField()
+    cc_myself = forms.BooleanField(required=False)
