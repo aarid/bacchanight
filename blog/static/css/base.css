@@ -1,7 +1,7 @@
 /*General CSS Setup*/
 body {
     background: #D4D9DD url('images/bg03.jpg');
-    color: #474f51;
+    color: #000000;
     font-size: 13.5pt;
     font-family: 'Yanone Kaffeesatz';
     line-height: 1.85em;
@@ -57,7 +57,6 @@ body {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
 }
-
 
 .tri-right.left-top:after {
     content: ' ';
@@ -151,24 +150,27 @@ hr {
 }
 /***************** FIN ***********************************/
 
+/***************** Pour la description de l'image à la fin ************************/  
 .descript {
     position: absolute;
     padding-left: 460px;
-    top: 10px;
-    font-size: x-large;
+    line-height: 1.85em;
+    top: 20px;
+    font-size: medium;
 }
 
 .descript_image {
     position: absolute;
-    top: 50px;
+    top: 30px;
 }
 
 .d_image {
     width: 380px;
     height: 320px;
 }
+/************************** FIN **********************************/
 
-/******************************** Pour le bouton jouer *********************/
+/************************* Pour le bouton jouer *********************/
 .millieu {
     position: absolute;
     padding-top: 90px;
@@ -248,8 +250,8 @@ button.button:hover::after, button.button:focus::after, .button1:hover::after, .
 /********************** Pour le bouton rejouer ************************/
 .replay {
     position: absolute;
-    padding-top: 460px;
-    padding-left: 260px;
+    padding-top: 30px;
+    padding-left: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -379,10 +381,6 @@ button.button:hover::after, button.button:focus::after, .button1:hover::after, .
         padding-left: 0px;
         top: 360px;
     }
-    
-    .descript_image {
-        top: 20px;
-    }
 
     .d_image {
         width: 320px;
@@ -484,10 +482,6 @@ button.button:hover::after, button.button:focus::after, .button1:hover::after, .
     .descript {
         padding-left: 0px;
         top: 320px;
-    }
-    
-    .descript_image {
-        top: 20px;
     }
 
     .d_image {
