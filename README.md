@@ -55,14 +55,14 @@ Liens utiles pour les sites :
 
 Liaisons des salles 
 
-Salle 1 ---> Les années 1910-1940 : du cubisme au retour à l'ordre (clé = 10)
+Salle 1(Abdoulaye & Mouctar) ---> Les années 1910-1940 : du cubisme au retour à l'ordre (clé = 10)
 
-Salle 2 ---> Odilon Redon et l'art autour de 1900 (clé = 13)
+Salle 2(Saliou) ---> Odilon Redon et l'art autour de 1900 (clé = 13)
 
-Salle 3 ---> Impressionnisme et naturalisme (clé = 9)
+Salle 3(Ousmane) ---> Impressionnisme et naturalisme (clé = 9)
 
-Salle 4 ---> Paysages et peinture animalière (clé = 14)
+Salle 4(Ibrahim) ---> Paysages et peinture animalière (clé = 14)
 
-Salle 5 ---> Le renouveau de la peinture d'histoire entre académisme et réalisme (clé = 11)
+Salle 5(Aguibou) ---> Le renouveau de la peinture d'histoire entre académisme et réalisme (clé = 11)
 
-Salle 6 ---> Les années romantiques et la peinture d'histoire (clé = 12)
+Salle 6(Ibrahim & Mouctar) ---> Les années romantiques et la peinture d'histoire (clé = 12)
