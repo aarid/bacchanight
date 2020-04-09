@@ -30,6 +30,7 @@ def contacter(request):
             message = form.cleaned_data['message']
             mail_admin = ['ousmane2014bah@gmail.com']
 
+            print("je suis là")
             send_mail(nomPrenom, admail, message, mail_admin)
 
             #return render(request, 'blog/contacter.html', {'message': message})
@@ -47,6 +48,20 @@ def thanks(request):
 # Méthode qui retourne la page faq
 def faq(request):
     return render(request, 'blog/faq.html', {})
+
+####
+def faq_jouer(request):
+    return render(request, 'blog/faq_jouer.html', {})
+
+def faq_secret(request):
+    return render(request, 'blog/faq_secret.html', {})
+
+def faq_algo(request):
+    return render(request, 'blog/faq_algo.html', {})
+
+def faq_objectif(request):
+    return render(request, 'blog/faq_objectif.html', {})
+####
 
 # Méthode qui retourne la page faq
 def qui_sommes_nous(request):

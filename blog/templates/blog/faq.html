@@ -10,20 +10,26 @@
         <center><p><h2><u><i>Tous ce que vous avez toujours voulu savoir à propos de Bacchantor</i></u></h2></p></center>
         <br>
     <div class="row">
+        <style>
+            img {
+              border-radius: 18px;
+            }
+        </style>
 
-        <a href="#">
+        <p STYLE="padding:0 130 0 0px;">
+        <a href="{% url 'faq_jouer' %}">
         <figure>
-            <img src="{% static 'img_site/jouer_faq.png' %}" height="320" width="300"  alt="Mot jouer">
+            <img src="{% static 'img_site/jouer_faq.png' %}" height="300" width="290"  alt="Mot jouer">
             <figcaption> <b>Comment jouer avec Bacchantor ?</b></figcaption>
         </figure>
         </a>
 
         
 
-    <p STYLE="padding:0 0 0 250px;">
-        <a href="#">
+    <p STYLE="padding:0 0 0 230px;">
+        <a href="{% url 'faq_secret' %}">
             <figure>
-            <img src="{% static 'img_site/top_secret.png' %}" height="320" width="300"  alt="Mot secret">
+            <img src="{% static 'img_site/top_secret.png' %}" height="300" width="290"  alt="Mot secret">
             <figcaption> <b>Quel est le secret de Bacchantor ?</b></figcaption>
         </figure>
         </a>
@@ -34,18 +40,18 @@
 
 
     <div class="row">
-        <a href="#">
+        <a href="{% url 'faq_algo' %}">
             <figure>
-                <img src="{% static 'img_site/algo_faq.png' %}" height="320" width="300"  alt="Mot jouer">
+                <img src="{% static 'img_site/algo_faq.png' %}" height="300" width="290"  alt="Mot jouer">
                 <figcaption> <b> Comprendre nos algorithmes !</b></figcaption>
             </figure>
         </a>
 
-        <p STYLE="padding:0 0 0 250px;">
-        <a href="#">
+        <p STYLE="padding:0 0 0 230px;">
+            <a href="{% url 'faq_objectif' %}">
             <figure>
-                <img src="{% static 'img_site/objectif_faq.png' %}" height="320" width="300"  alt="Mot jouer">
-                <figcaption><b>Objectif du jeu</b></figcaption>
+                <img src="{% static 'img_site/objectif_faq.png' %}" height="300" width="290"  alt="Mot jouer">
+                <figcaption><center><b>Objectif du jeu</b></center></figcaption>
             </figure>
         </a>
         </p>
