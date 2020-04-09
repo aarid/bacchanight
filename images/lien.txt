@@ -2,7 +2,7 @@
 Liens des images :
 
 
-==== Abdoulhay (Salle 1)==== 
+==== Abdoulhay ==== 
 
 img1 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/rrrno1tnixxp80q2kxytvunscabhg8ktaqj4krau5nnmxbphe4?search=Buzon
 
@@ -72,15 +72,17 @@ img33 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/i3zuoawlslyg9ld
 
 img34 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/xzldanzng0lf50ah0vypvxopoktc0gn7tstga2yo7qxc50pxm3
 
-img35 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/zzx90n9tsy3n78li4tn6bg4wrdkklkbmbjrkmkmj6zrfwwl2tb
+img35 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/na9ic3ijs72zwqko2co60jpki4vforewatd92vv5119d8b9wny
 
 img36 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/b36axkjrkaq6yc4ujk3xm2vozwil76xb4rk4nwd8kgf73e0q4y
 
-img37 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/t2fv0ltvzqfsbnt41qenkx2q02ni0avpmrg3v09vx8nhd482e6
+img37 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/zzx90n9tsy3n78li4tn6bg4wrdkklkbmbjrkmkmj6zrfwwl2tb
 
-img38 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/cds504i905vbqfejpjxrrs7yvynh17ewxlsiwhsn5lar5htqgp
+img38 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/t2fv0ltvzqfsbnt41qenkx2q02ni0avpmrg3v09vx8nhd482e6
 
-img39 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/yvzoy0793c492iv8tq717ik3m5nso9ukqrg6yp5f3h8yb1p24y
+img39 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/cds504i905vbqfejpjxrrs7yvynh17ewxlsiwhsn5lar5htqgp
+
+img40 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/yvzoy0793c492iv8tq717ik3m5nso9ukqrg6yp5f3h8yb1p24y
 
 img41 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/qqh01g80lsp8xn9g7u92xok5hehmeecg1zyyuit9hiiseyeojc
 
@@ -91,7 +93,7 @@ img42 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/ii7qqyrkhe20jfm
 
 
 
-==== Ousmane (Salle 2)==== 
+==== Ousmane ==== 
 
 img43 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/95i0wn29lohjmw08cq8m5jaw7xyf0usjci0f4vl1jztf70kw3b
 
@@ -134,7 +136,7 @@ img61 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/1nkmf7o35tt1qzx
 
 
 
-==== Aguibou (Salle 5)==== 
+==== Aguibou ==== 
 
 img62 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/npl7rkd2dtfx4oiirlsdui45kshe0xoahsx08yrt6bcvky1v4q
 
@@ -187,7 +189,7 @@ img236: http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/5d3dbboqt2xqw9o
 
 
 
-==== Mouctar (Salle 1 & Salle 6)====
+==== Mouctar ====
 
 img83 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/iv5w650ogdpxifrobw80i3amso7fb7f0oahf1lh19ycxn3eszb?search=
 
@@ -332,7 +334,7 @@ img130:
 
 
 
-==== Ibrahim (Salle 4 & Salle 6)====
+==== Ibrahim ====
 
 
 img132 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/ov1wkb0u5akbq9efcop5p0nkqvfeytiwmak7qocts38smqzfiv
@@ -436,7 +438,7 @@ img237 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/5aevh927sl9ywb
 img238 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/y0nbwee3fsbs0mnfc6zohwdi8pr6m71k3tbjbgp1296r8rh469
 
 
-==== Saliou (Salle 2)====
+==== Saliou ====
 
 
 img180 : http://musba-bordeaux.opacweb.fr/fr/search-notice/detail/kfxbenq8ec2igposk05avknok5ta37k7w7w372bjj59yqc3khv
