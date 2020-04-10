@@ -4,53 +4,10 @@
 {% block titre %}Nous contacter{% endblock %}
 
 {% block corps %}
-    <div class="container distance">
-
-        
-        <div class="section-heading">
-            <h2>Pour tout avis remplissez ce formulaire</h2>
-            <div class="line"></div>
-        </div>
-
-        <form action="{% url 'contacter' %}" method="post">
-
-        {% csrf_token %}
-        <div class="row">       
-            <div class="col-lg-6">
-            <label for="nomPrenom">Nom & Prenom: </label>
-            <input type="text" name="nomPrenom" class="form-control mb-30" placeholder="Entrez votre nom et prénom" required><br>
-        </div>
-        <div class="col-lg-6">
-            <label for="admail">Votre adresse email: </label>
-            <input type="email" name="admail" class="form-control mb-30" placeholder="votre.adresse@email.com" maxlength="100" required><br>
-        </div>
-        <div class="col-12">
-            <label for="message">Votre Message :</label>
-            <textarea name="message" class="form-control mb-30" placeholder="Votre message ici" ></textarea>
-        </div>
-            
+    <div class="container distance">         
         <p>
-            Pour nous contacter :          
-
+            Pour nous contacter :   
             <a href="mailto:ousmane2014bah@gmail.com?subject=Merci%20de%20remplir%20l'objet%20de%20l'email">Par Ici</a>
         </p>
-        
-        
-        <div class="col-12">
-            <center><br/>
-                
-            <button type="submit" class="btn dento-btn">Envoyer</button>
-        </center>
-        </div>
     </div>
-        </form>
-
-        <!-- <center>
-                <h2>Thanks {{ nomPrenon }} ! </h2>
-                <p>Nous vous repondrerons au plus vite... </p>
-            </center>
-            <br/><br/><br/> -->
-    </div>
-
-    
 {% endblock %}

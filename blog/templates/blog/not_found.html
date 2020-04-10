@@ -1,27 +1,31 @@
 {% extends 'base.html' %} {% load static %} {% block titre %}Tableau fantôme?{% endblock %} {% block corps %}
-<div class="container">
-    <div class="col-sm-4">
-        <div class="descript_image">
-            <img src="{% static 'img_site/question-mark.jpg' %}" alt="Image ?" class="d_image" />
-        </div>
-    </div>
+<div class="container champs">
+    <div class="col-sm-2"> </div>
 
-    <div class="col">
-        <div class="descript">
-            <p> <u><strong>Auteur :</strong></u> ? </p>
-            <p> <u><strong>Date de création :</strong></u> ? </p>
-            <p> <u><strong>Titre :</strong></u> ? </p>
-            <p> <u><strong>Matière et technique :</strong></u> ? </p>
-            <p> <u><strong>Domaine :</strong></u> ? </p>
-            <p> <u><strong>Sujet :</strong></u> ? </p>
-            <div class="replay">
-                <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
+    <div class="col-sm-8">
+        <div class="row">
+            <div class="col-sm-2"> </div>
+
+            <div class="col-sm-10">
+                <div class="personnage1 d-inline d-sm-inline-block ">
+                    <img src="{% static 'img_site/bacchanator4.svg' %}" class="rounded-circle img" alt="Image narrateur" />
+                </div>
+
+                <div class="talk-bubble2 tri-right round border left-top" id="plus">
+                    <div class="talktext">
+                        <p class="p">MESSAGE</p>
+                    </div>
+
+                    <div class="replay">
+                        <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    
-</div>
+    <div class="col-sm-2"> </div>
+
 </div>
 
 {% endblock %}
