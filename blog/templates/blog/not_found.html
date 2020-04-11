@@ -1,11 +1,4 @@
-{% extends 'base.html' %}
-
-{% load static %}
-
-{% block titre %}not found {% endblock %}
-
-
-{% block corps %}
+{% extends 'base.html' %} {% load static %} {% block titre %}Tableau fantôme?{% endblock %} {% block corps %}
 <div class="container champs">
     <div class="col-sm-2"> </div>
 
@@ -13,38 +6,26 @@
         <div class="row">
             <div class="col-sm-2"> </div>
 
-            <div class="col-sm-10 centre">
-
-                <div class="avatar_found">
-                    <img src="{% static 'img_site/bacchanator4.svg' %}"  alt="Image narrateur" />
+            <div class="col-sm-10">
+                <div class="personnage1 d-inline d-sm-inline-block ">
+                    <img src="{% static 'img_site/bacchanator4.svg' %}" class="rounded-circle img" alt="Image narrateur" />
                 </div>
 
-                <div class="gauche">
-                    <div class="bubble_found">
-                        <div class="bubble-text-found">
-                            <p> Votre piege n'a pas marche <hr/>
-                                voyons la prochaine fois </p>
-                        </div>
+                <div class="talk-bubble2 tri-right round border left-top" id="plus">
+                    <div class="talktext">
+                        <p class="p">MESSAGE</p>
                     </div>
 
-                    <div class="wrapper_found">
-                        <div class="link_wrapper">
-                            <a href="{% url 'play_button' %}"> REJOUER </a>
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
-                                    <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
-                                </svg>
-                            </div>
-                        </div>
+                    <div class="replay">
+                        <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
                     </div>
                 </div>
             </div>
-
-            <div class="col-sm-2"> </div>
         </div>
-    
     </div>
+
     <div class="col-sm-2"> </div>
+
 </div>
 
 {% endblock %}

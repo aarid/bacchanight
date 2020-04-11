@@ -220,16 +220,16 @@ button.button::before {
     transition: all .3s ease-in-out 0s;
 }
 
-.button:hover, .button:focus, .button1:hover, .button1:focus {
+.button:hover, .button:focus {
     color: #313133;
     transform: translateY(-6px);
 }
 
-button.button:hover::before, button.button:focus::before, .button1:hover::before, .button1:focus::before {
+button.button:hover::before, button.button:focus::before {
     opacity: 1;
 }
 
-button.button::after, .button1::after {
+button.button::after /*,.button1::after*/ {
     content: '';
     width: 30px; height: 30px;
     border-radius: 100%;
@@ -242,9 +242,22 @@ button.button::after, .button1::after {
     animation: ring 1.5s infinite;
 }
 
-button.button:hover::after, button.button:focus::after, .button1:hover::after, .button1:focus::after{
+button.button:hover::after, button.button:focus::after {
     animation: none;
     display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+    100% {
+        width: 160px;
+        height: 160px;
+        opacity: 0;
+    }
 }
 
 /********************** Pour le bouton rejouer ************************/
@@ -273,18 +286,6 @@ button.button:hover::after, button.button:focus::after, .button1:hover::after, .
 }
 /*********************** FIN ********************************/
 
-@keyframes ring {
-    0% {
-        width: 10px;
-        height: 10px;
-        opacity: 1;
-    }
-    100% {
-        width: 160px;
-        height: 160px;
-        opacity: 0;
-    }
-}
 /******************* FIN du bouton jouer et rejouer *********************/
 
 /******************** POUR LES ECRANS MOYENS ***************************/

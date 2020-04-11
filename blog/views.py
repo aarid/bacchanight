@@ -163,6 +163,9 @@ def jouer(request):
             print(size_contain)
             size_concerns = concerns.count()
 
+            if size_contain==0 or size_concerns==0:
+                return render(request, 'blog/not_found.html')
+
             if size_contain ==1:
                 img = contain[0].image
                 return render(request, 'blog/afficher_image.html', {'img': img})
@@ -183,8 +186,3 @@ def jouer(request):
     return render(request, 'blog/jouer.html', {'question': question, 'associee': associee})
 
 
-def after_reponse(request):
-    question = Question.objects.get(cleQuestion=1)
-    associee = Associer.objects.filter(question = question)
-
-    return render(request, 'blog/liens.html', {'question': question, 'associee': associee,'q': q})

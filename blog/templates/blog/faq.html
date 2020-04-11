@@ -5,58 +5,11 @@
 {% block titre %}Faq{% endblock %}
 
 {% block corps %}
-    <div class="container distance">
-        <br>
-        <center><p><h2><u><i>Tous ce que vous avez toujours voulu savoir à propos de Bacchantor</i></u></h2></p></center>
-        <br>
-    <div class="row">
-        <style>
-            img {
-              border-radius: 18px;
-            }
-        </style>
+<p>Dans le cadre de l’UE Projets de communication transdisciplinaire en L3 informatique, l’équipe est amenée à proposer un projet pour le musée des beaux-arts de Bordeaux.
+</p> 
+ <p> Dans ce contexte Bacchanator a été proposé. Le projet est un jeu consistant à deviner l’œuvre à laquelle l'utilisateur pense.</p>
 
-        <p STYLE="padding:0 130 0 0px;">
-        <a href="{% url 'faq_jouer' %}">
-        <figure>
-            <img src="{% static 'img_site/jouer_faq.png' %}" height="300" width="290"  alt="Mot jouer">
-            <figcaption> <b>Comment jouer avec Bacchantor ?</b></figcaption>
-        </figure>
-        </a>
-
-        
-
-    <p STYLE="padding:0 0 0 230px;">
-        <a href="{% url 'faq_secret' %}">
-            <figure>
-            <img src="{% static 'img_site/top_secret.png' %}" height="300" width="290"  alt="Mot secret">
-            <figcaption> <b>Quel est le secret de Bacchantor ?</b></figcaption>
-        </figure>
-        </a>
-    </p>
-    </div>
-
-    <br>
-
-
-    <div class="row">
-        <a href="{% url 'faq_algo' %}">
-            <figure>
-                <img src="{% static 'img_site/algo_faq.png' %}" height="300" width="290"  alt="Mot jouer">
-                <figcaption> <b> Comprendre nos algorithmes !</b></figcaption>
-            </figure>
-        </a>
-
-        <p STYLE="padding:0 0 0 230px;">
-            <a href="{% url 'faq_objectif' %}">
-            <figure>
-                <img src="{% static 'img_site/objectif_faq.png' %}" height="300" width="290"  alt="Mot jouer">
-                <figcaption><center><b>Objectif du jeu</b></center></figcaption>
-            </figure>
-        </a>
-        </p>
-    </div>
-
-</div>
+ Dans ce jeu une série de questions seront posées au joueur, des questions portant sur les caractéristiques de l’œuvre, auxquelles il devra répondre parmi les réponses disponibles. Cela permet de deviner celle-ci. 
+À la fin l’œuvre sera affichée, ainsi que toutes ses descriptions (l’auteur, date de création, domaine, ...etc.).
 
 {% endblock %}
