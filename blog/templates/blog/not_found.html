@@ -1,31 +1,27 @@
 {% extends 'base.html' %} {% load static %} {% block titre %}Tableau fantôme?{% endblock %} {% block corps %}
-<div class="container champs">
-    <div class="col-sm-2"> </div>
+<div class="container">
+    <div class="col-sm-4">
+        <div class="descript_image">
+            <img src="{% static 'img_site/question-mark.jpg' %}" alt="Image ?" class="d_image" />
+        </div>
+    </div>
 
-    <div class="col-sm-8">
-        <div class="row">
-            <div class="col-sm-2"> </div>
-
-            <div class="col-sm-10">
-                <div class="personnage1 d-inline d-sm-inline-block ">
-                    <img src="{% static 'img_site/bacchanator4.svg' %}" class="rounded-circle img" alt="Image narrateur" />
-                </div>
-
-                <div class="talk-bubble2 tri-right round border left-top" id="plus">
-                    <div class="talktext">
-                        <p class="p">MESSAGE</p>
-                    </div>
-
-                    <div class="replay">
-                        <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
-                    </div>
-                </div>
+    <div class="col">
+        <div class="descript">
+            <p> <u><strong>Auteur :</strong></u> Celui dont on ne sait rien </p>
+            <p> <u><strong>Date de création :</strong></u> Des temps anciens aux temps futurs en passant par le présent.... </p>
+            <p> <u><strong>Titre :</strong></u> "?" </p>
+            <p> <u><strong>Matière et technique :</strong></u> C'est une œuvre créée à partir de réponses aussi douteuses les unes que les autres  </p>
+            <p> <u><strong>Domaine :</strong></u> Abimes mystérieux du mystère </p>
+            <p> <u><strong>Sujet :</strong></u> Refaire le jeu serait assez judicieux. </p>
+            <div class="replay">
+                <h2> <a class="button1" href="{% url 'replay' %}" title="Cliquez pour rejouer"> Rejouer</a> </h2>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-2"> </div>
-
+    
+</div>
 </div>
 
 {% endblock %}

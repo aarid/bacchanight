@@ -163,7 +163,7 @@ def jouer(request):
             print(size_contain)
             size_concerns = concerns.count()
 
-            if size_contain==0 or size_concerns==0:
+            if size_contain==0 or (size_concerns==0 and size_contain!=1):
                 return render(request, 'blog/not_found.html')
 
             if size_contain ==1:
