@@ -288,6 +288,24 @@ button.button:hover::after, button.button:focus::after {
 
 /******************* FIN du bouton jouer et rejouer *********************/
 
+/******************** Pour les pages "Qui sommes nous" et "FAQ" ****************************/
+.position h4 {
+    padding-top: 80px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.position p {
+    font-size: x-large;
+    font-style: italic;
+}
+
+.dif {
+    text-transform: lowercase;
+}
+/********************************** FIN *********************************************/
+
+
 /******************** POUR LES ECRANS MOYENS ***************************/
 @media (min-width: 381px) and (max-width: 930px) {
     .personnage {
