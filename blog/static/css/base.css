@@ -293,6 +293,7 @@ button.button:hover::after, button.button:focus::after {
     padding-top: 80px;
     text-align: center;
     text-transform: uppercase;
+    height: 140px;
 }
 
 .position p {
