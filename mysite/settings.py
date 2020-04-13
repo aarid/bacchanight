@@ -139,27 +139,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #SECURE_SSL_REDIRECT = False
 #SESSION_COOKIE_SECURE = False
 #CSRF_COOKIE_SECURE = False
- 
-# myaccount.google.com/lesssecureapps 
-# myaccount.google.com/DisplayUnlockCaptcha 
-# myaccount.google.com/passwords
-# Email Settings 
-# EMAIL_HOST = 'stmp.gmail.com'
-# EMAIL_PORT = '1025'
-# EMAIL_HOST_USER = 'bahousmane4567@gmail.com'
-# EMAIL_HOST_PASSWORD = ''
-# EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
-
-
-#////////////////////////////////
-
-#EMAIL_BACKEND = 'project.mail.CustomEmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-#DEBUG_EMAIL = 'ousmane2014bah@gmail.com'
-EMAIL_HOST = 'stmp.gmail.com'
-EMAIL_PORT = '465'
-EMAIL_HOST_USER = 'ousmane2014bah@gmail.com'
-EMAIL_HOST_PASSWORD = '################'
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
