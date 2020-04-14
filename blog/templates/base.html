@@ -33,34 +33,21 @@
                 <div id="navbarSupportedContent" class="collapse navbar-collapse col">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active"> <a class="nav-link text-white text" href="{% url 'base' %}">Accueil</a> </li>
-                        <!-- <li class="nav-item"> <a class="nav-link text-white text" href="{% url 'contacter' %}">Nous contacter</a></li> -->
                         <li class="nav-item"> <a class="nav-link text-white text" href="{% url 'qui_sommes_nous' %}">Qui sommes nous</a></li>
-                        <!-- <li class="nav-item"> <a class="nav-link text-white text" href="{% url 'not_found' %}">FAQ</a></li> -->
                         <li class="nav-item"> <a class="nav-link text-white text" href="{% url 'faq' %}">FAQ</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <div>
-            {% block corps %} {% endblock %} <!--    Pour le contenu de la page
-                <center>
-                    <div class="lds-hourglass"></div>
-                    <div class="lds-hourglass"></div>
-                    <div class="lds-hourglass"></div>
-                </center>-->
-            {% block question %} <!--    Block pour les questions    -->
-                {% block reponse %} {% endblock %} <!--    Block pour les reponses correspondantes à la question   -->
+            {% block corps %} {% endblock %} 
+
+            {% block question %} 
+                {% block reponse %} {% endblock %} 
             {% endblock %}
         </div>
 
-        <!-- Footer -->
-        <!-- <footer class="page-footer font-small blue text-light bg-dark">
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-            </div>
-        </footer> -->
-        <!-- Footer -->
-        
+                
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

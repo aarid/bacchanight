@@ -2,10 +2,6 @@ from django.shortcuts import render
 from .models import Question, Associer, Tag, Image, Contenir, Concerner
 from django.db.models import Count
 from .forms import AnswerForm
-from django.http import HttpResponseRedirect
-from django.core.mail import send_mail
-from .forms import ContacterNous
-#from django.core import serializers
 
 # Create your views here.
 
@@ -19,49 +15,11 @@ def accueil(request):
     request.session['questions_asked'] = ""
     return render(request, 'blog/acceuil.html')
 
-# Méthode qui retourne la page Nous contacter
-def contacter(request):
-    if request.method == 'POST':
-        form = ContacterNous(request.POST)
-
-        if form.is_valid():
-            nomPrenom  = form.cleaned_data['nomPrenom']
-            admail = form.cleaned_data['admail']
-            message = form.cleaned_data['message']
-            mail_admin = ['ousmane2014bah@gmail.com']
-
-            print("je suis là")
-            send_mail(nomPrenom, admail, message, mail_admin)
-
-            #return render(request, 'blog/contacter.html', {'message': message})
-            return HttpResponseRedirect('/thanks/')
-
-    else:
-        form = ContacterNous()
-
-    return render(request, 'blog/contacter.html', {'form': form})
-
-#Envoie de message (teste)
-def thanks(request):
-    return render(request, 'blog/thanks.html', {})
 
 # Méthode qui retourne la page faq
 def faq(request):
     return render(request, 'blog/faq.html', {})
 
-####
-def faq_jouer(request):
-    return render(request, 'blog/faq_jouer.html', {})
-
-def faq_secret(request):
-    return render(request, 'blog/faq_secret.html', {})
-
-def faq_algo(request):
-    return render(request, 'blog/faq_algo.html', {})
-
-def faq_objectif(request):
-    return render(request, 'blog/faq_objectif.html', {})
-####
 
 # Méthode qui retourne la page faq
 def qui_sommes_nous(request):
