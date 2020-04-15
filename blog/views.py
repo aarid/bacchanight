@@ -46,15 +46,15 @@ def jouer(request):
         # create a form instance and populate it with data from the request:
         form = AnswerForm(request.POST)
         # check whether it's valid:
-        print(form)
+        #print(form)
         if form.is_valid():
             tag = form.cleaned_data['tag']
-            print( "tag = " + tag)
+            #print( "tag = " + tag)
             no_tag = form.cleaned_data['no_tag']
-            print(no_tag)
+            #print(no_tag)
 
             question_asked = form.cleaned_data['question_asked']
-            print("questions_asked = " + question_asked)
+            #print("questions_asked = " + question_asked)
 
             question_asked = form.cleaned_data['question_asked']
             
@@ -69,10 +69,10 @@ def jouer(request):
                 if no_tag!="":
                     cletag =  Tag.objects.all().filter(tag = no_tag).values_list()[0][0]
                     no_tags = no_tags + "," + str(cletag)
-            print(cletag)
-            print("tags = " + tags)
-            print(no_tags)
-            print(questions_asked)
+            #print(cletag)
+            #print("tags = " + tags)
+            #print(no_tags)
+            #print(questions_asked)
 
             if question_asked!="":
                 questions_asked = questions_asked + "," +  question_asked
@@ -92,33 +92,22 @@ def jouer(request):
 
             contain = Contenir.objects.all()
             concerns = Concerner.objects.all()
-            #concerns = concerns.values('question').annotate(count = Count('question')).order_by('count')
             concerns = concerns.order_by('question__priority')
-            print("Début for")
-            print(concerns)
+            
             for i in range(len(tags)):
-                print("------------------------------------------------------")
                 contain = contain.filter(image__tags = int(tags[i]))
                 concerns = concerns.filter(question__tags = int(tags[i]))
-                print(concerns)
                 
 
             for i in range(len(no_tags)):
                 contain = contain.exclude(image__tags = int(no_tags[i]))
                 concerns = concerns.exclude(tag = int(no_tags[i]))
                 concerns = concerns.exclude(question__inclu = int(no_tags[i]))
-
-            print("Avant")
-            
  
             for i in range(len(questions_asked)):
                 concerns = concerns.exclude(question__cleQuestion = int(questions_asked[i]))
 
-            print(contain)
-            print(concerns)
             size_contain = len(contain.values('image').annotate(dcount=Count('image')) )
-            print("******************************************")
-            print(size_contain)
             size_concerns = concerns.count()
 
             if size_contain==0 or (size_concerns==0 and size_contain!=1):
@@ -132,10 +121,8 @@ def jouer(request):
                 question = concerns[0].question
                 if question == question_asked and size_concerns>1:
                     question = concerns[1].question
-                print(question)
                 associee = Associer.objects.filter(question = question.cleQuestion)
-                print(associee)
-
+                
     else:
         question = Question.objects.get(cleQuestion=1)
         associee = Associer.objects.filter(question = question)
