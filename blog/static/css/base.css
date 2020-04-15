@@ -406,6 +406,14 @@ button.button:hover::after, button.button:focus::after {
         width: 320px;
         height: 320px;
     }
+
+    .position h4 {
+        font-size: medium;
+    }
+    .position p {
+        font-size: medium;
+    }
+    
 }
 /************************ FIN ****************************/
 
